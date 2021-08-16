@@ -10,6 +10,7 @@
   --font-weight-bold: 700; /*Bold*/
   --set-gap: 30px;
   --timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-direct:250ms;
 }
 
 body {
@@ -93,13 +94,16 @@ img {
   line-height: 1.14;
   color: var(--text-title-color-btn-dark);
   padding: 32px 0;
+  transition-property: color;
+  transition-duration: var(--trans-direct);
+  transition-timing-function: var(--timing-function);
 }
 
 .nav-bar-list a:hover,
 .nav-bar-list a:focus {
   text-decoration: none; /* фокус кнопок навігації*/
   color: var(--akcent-color);
-  transition: 250ms var(--timing-function);
+  
 }
 .link,.link-current{
   display: block;
@@ -115,12 +119,13 @@ img {
   font-size: 14px; /* контакти*/
   line-height: 1.14;
   color: var(--text-subtitle-color);
+  transition-property: color;
+  transition-duration: var(--trans-direct);
+  transition-timing-function:var(--timing-function);
 }
-.akcent:hover,
-.akcent:focus {
+.contact:hover,.contact:focus {
   text-decoration: none; /* фокус на контактах*/
   color: var(--akcent-color);
-  transition: color 250ms var(--timing-function);
 }
 
 /* header flex style  */
@@ -229,12 +234,15 @@ img {
   text-align: center;
   flex-basis: 50px;
   border-radius: 4px;
+  transition-property: background-color;
+  transition-duration: var(--trans-direct);
+  transition-timing-function:var(--timing-function);
 }
 
 .btn-order-service:hover,
 .btn-order-service:focus{
   background-color: rgba(24, 140, 232, 1);
-  transition: background-color 250ms var(--timing-function);
+  
 }
 
 /* advantegse styles  */
@@ -388,13 +396,15 @@ img {
   height: 44px;
   border-radius: 50%;
   fill: var(--icon-color);
+  transition-property: background-color, fill;
+  transition-duration: var(--trans-direct);
+  transition-timing-function:var(--timing-function);
 }
 .social-link:hover,
 .social-link:focus {
   fill: var(--text-hero-section-logo-light);
   background-color: var(--akcent-color);
-  transition:fill 250ms var(--timing-function);
-  transition:background-color 250ms var(--timing-function);
+  
 }
 .social-link:not(:last-child) {
   margin-right: 10px;
@@ -435,22 +445,27 @@ img {
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  transition-property: border;
+  transition-duration: var(--trans-direct);
+  transition-timing-function:var(--timing-function);
 }
 
 .holder-svg-client:focus svg,
 .holder-svg-client:hover svg {
   fill: var(--akcent-color);
-  transition: fill 250ms var(--timing-function);
 }
+
 .holder-svg-client:focus,
 .holder-svg-client:hover {
   border: 1px solid var(--akcent-color);
   border-radius: 4px;
-  transition:border 250ms var(--timing-function);
-}
+ }
 
 .icon-clients {
   fill: var(--icon-color);
+  transition-property: fill;
+  transition-duration: var(--trans-direct);
+  transition-timing-function:var(--timing-function);
 }
 
 /* footer font style  */
@@ -463,20 +478,30 @@ img {
   text-decoration: none;
   color: var(--text-hero-section-logo-light);
 }
+
 footer {
   background-color: #2f303a;
-}
-
-.footer {
-  padding-top: 60px;
+  padding-top: 72px;
   padding-bottom: 60px;
 }
+
+
 .holder {
   display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 .adress {
   font-style: normal;
+}
+
+.contact-footer {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1,71;
+  letter-spacing: 0.03em;        /* контакти футер*/
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .adress-line {
@@ -484,37 +509,104 @@ footer {
   line-height: 1.71;
   color: var(--text-hero-section-logo-light);
 }
+
 .logo-light {
   display: block;
   margin-bottom: 20px;
+
 }
 address p {
   margin-top: 0;
   margin-bottom: 9px;
 }
-.foter-item:not(:last-child) {
+
+.footer-item:not(:last-child) {
   margin-bottom: 6px;
 }
 /* Social link footer style  */
 .basement-title {
   font-weight: var(--font-weight-bold);
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-hero-section-logo-light);
   margin-bottom: 20px;
 }
 .basement {
-  padding-top: 72px;
   width: 206px;
   height: 80px;
   margin-left: 70px;
+  margin-right: 93px;
 }
 .darken {
   fill: var(--text-hero-section-logo-light);
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.form-subscribe{
+  display: flex;
+  align-items: center;
+}
+
+.sbscr-holder {
+  position: relative;
+}
+.sbscr {
+  position: absolute;
+  top:15px;
+  left: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.mail-sbscr:focus + .sbscr,
+.mail-sbscr:not(:placeholder-shown) + .sbscr {
+  opacity: 0;
+}
+
+.newsletter-legend {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-hero-section-logo-light);
+}
+
+.mail-sbscr{
+  height: 50px;
+  width: 358px;
+  background-color: rgba(33, 150, 243, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--text-hero-section-logo-light);
+ 
+}
+.subscribe-btn{
+  margin-left: 12px;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 29px;
+  width: 200px;
+  height: 50px;
+  background: var(--akcent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--text-hero-section-logo-light);
+}
+
+.send-email {
+  fill: var(--text-hero-section-logo-light);
+  margin-left: 10px;
+}
+
+
+
 /* Modal window */
 .backdrop {
   position: fixed;
@@ -549,7 +641,7 @@ transform: translate(-50%, -50%) scale(1.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transform: translate(-50%,-50%) scale(1);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--trans-direct) var(--timing-function);
 }
 
 .close-modal {
@@ -585,7 +677,6 @@ transform: translate(-50%, -50%) scale(1.2);
   background-color: var(--akcent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition:color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .sign-work {
@@ -608,6 +699,7 @@ transform: translate(-50%, -50%) scale(1.2);
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  transition:color var(--trans-direct) var(--timing-function), box-shadow var(--trans-direct) var(--timing-function), background-color var(--trans-direct) var(--timing-function);
 }
 button {
   font-family: inherit;
@@ -644,13 +736,13 @@ button:not(:last-child) {
 .card-poster:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition:box-shadow 250ms var(--timing-function);
 }
-
 .card-poster {
+  box-shadow: none;
   display: block;
   border: 1px solid #eeeeee;
- }
+  transition:box-shadow var(--trans-direct) var(--timing-function);
+}
 
 .image-thumb {
   position: relative;
@@ -667,12 +759,13 @@ button:not(:last-child) {
   padding: 63px 24px;
   transform: translateY(100%);
   opacity: 0;
+  transition: transform var(--trans-direct) var(--timing-function), opacity var(--trans-direct) var(--timing-function);
  }
 
 .card-poster:hover .work-description {
   transform: translateY(0);
   opacity: 1;
-  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+  
  }
 .tehno-anagraph {
   font-size: 18px;

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- шапка сайта -->
+        <!-- шапка сайта -->
     <header class="header">
         <h2 class="visibility-hidden">Шапка сайту</h2>
         <div class="container nav-block">
@@ -27,7 +27,7 @@
                     <ul class="nav-bar-list">
                         <li class="nav-bar-item"><a href="./index.html" class="link-current">Студия</a></li>
                         <li class="nav-bar-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                        <li class="nav-bar-item"><a href=""class="link">Контакты</a></li>
+                        <li class="nav-bar-item"><a href="" class="link">Контакты</a></li>
                     </ul>
                 </div>
             </nav>
@@ -58,28 +58,15 @@
             </div>
         </div>
     </header>
-    <!-- Головна частина сторінки -->
+        <!-- Головна частина сторінки -->
     <main>
         <!-- Ефективне рішення -->
-
         <section class="hero-section  ">
             <div class="container ">
                 <h1 class="main-title">Эффективные решения <br> для вашего бизнеса</h1>
                 <button data-modal-open type="button" class="btn-order-service" aria-label="Заказать услугу">Заказать услугу</button>
             </div>
-        <!-- Модальне вікно -->
-
-            <div class="backdrop is-hidden" data-modal>
-                <div class="modal">
-                    <button data-modal-close class="close-modal">
-                        <svg class="close-btn" width="18" height="18">
-                            <use href="./images/icon/icons.svg#close_black"></use>
-                        </svg>
-                    </button>
-                </div>
-            </div>
         </section>
-
         <!-- Наші переваги -->
         <section class="our-advantages section">
             <div class="container">
@@ -137,7 +124,9 @@
         <section class="we-do section ">
             <div class="container ">
                 <h2 class="what-we-do">Чем мы занимаемся</h2>
+              
                 <ul class="we-do-list">
+                   
                     <li class="we-do-item">
                         <div class="link-image">
                             <a href="" class="image-card-item"><img src="./images/we_do/html_write_code_at_tablet.jpg"
@@ -147,6 +136,7 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="we-do-item">
                         <div class="link-image">
                             <a href="" class="image-card-item"><img src="./images/we_do/check_modile_format_website.jpg"
@@ -156,6 +146,7 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="we-do-item">
                         <div class="link-image">
                             <a href="" class="image-card-item"><img src="./images/we_do/choose_color_on_tablet.jpg"
@@ -165,7 +156,9 @@
                             </div>
                         </div>
                     </li>
+
                 </ul>
+                
             </div>
         </section>
         <!-- Наша команда -->
@@ -387,17 +380,17 @@
             </div>
         </section>
     </main>
-    <!-- Футер -->
+        <!-- Футер -->
     <footer>
         <div class="container holder">
-            <div class="footer">
+            <div class="footer-contact-holder">
                 <a href="./index.html" class="logo-light"><span class="web">Web</span>Studio</a>
                 <address class="adress">
                     <p class="adress-line">г. Киев, пр-т Леси Украинки, 26</p>
-                    <ul class="contact-foter-list">
-                        <li class="foter-item"><a href="mailto:info@devstudio.com"
-                                class="contact">info@devstudio.com</a></li>
-                        <li class="foter-item"><a href="tel:+380961111111" class="contact">+38 096 111 11 11</a></li>
+                    <ul class="contact-footer-list">
+                        <li class="footer-item"><a href="mailto:info@devstudio.com"
+                                class="contact-footer">info@devstudio.com</a></li>
+                        <li class="footer-item"><a href="tel:+380961111111" class="contact-footer">+38 096 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
@@ -432,9 +425,45 @@
                     </a>
 
                 </div>
+
             </div>
+            <div class="newsletter-subscribe">
+                <legend class="newsletter-legend">Подпишитесь на рассылку</legend>
+                <form action="" class="form-subscribe">
+                    <div class="sbscr-holder">
+                   
+                    <input
+                     type="email"
+                     name="email_news"
+                     id="mail_news"
+                     class="mail-sbscr"
+                     placeholder=" "/>
+                        
+                     <label for="mail_news" class="sbscr">E-mail</label>
+                    </div>
+                    <button type="submit" class="subscribe-btn">
+                        <spam>Подписаться</spam>
+                        <svg class="send-email" width="24px" height="24px">
+                        <use href="./images/icon/icons.svg#send"></use>
+                    </svg>
+                </button> 
+                </form>
+             
+            </div>
+
         </div>
     </footer>
+        <!-- Модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close class="close-modal">
+                <svg class="close-btn" width="18" height="18">
+                    <use href="./images/icon/icons.svg#close_black"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+        <!-- Підключення JS -->
     <script src="./js/modal.js"></script>
 </body>
 
