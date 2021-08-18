@@ -293,15 +293,16 @@
 
 <!-- Футер-->
 <footer>
+
     <div class="container holder">
-        <div class="footer">
+        <div class="footer-contact-holder">
             <a href="./index.html" class="logo-light"><span class="web">Web</span>Studio</a>
             <address class="adress">
                 <p class="adress-line">г. Киев, пр-т Леси Украинки, 26</p>
-                <ul class="contact-foter-list">
-                    <li class="foter-item"><a href="mailto:info@devstudio.com" class="contact-footer">info@devstudio.com</a>
-                    </li>
-                    <li class="foter-item"><a href="tel:+380961111111" class="contact-footer">+38 096 111 11 11</a></li>
+                <ul class="contact-footer-list">
+                    <li class="footer-item"><a href="mailto:info@devstudio.com"
+                            class="contact-footer">info@devstudio.com</a></li>
+                    <li class="footer-item"><a href="tel:+380961111111" class="contact-footer">+38 096 111 11 11</a></li>
                 </ul>
             </address>
         </div>
@@ -336,7 +337,36 @@
                 </a>
 
             </div>
+
         </div>
+        <div class="newsletter-subscribe">
+
+            <legend class="newsletter-legend">Подпишитесь на рассылку</legend>
+            
+            <form action="" class="form-subscribe">
+
+                <div class="sbscr-holder">
+               
+                <input
+                 type="email"
+                 name="email_news"
+                 id="mail_news"
+                 class="mail-sbscr"
+                 placeholder=" "/>
+                    
+                 <label for="mail_news" class="sbscr">E-mail</label>
+                </div>
+
+                <button type="submit" class="subscribe-btn">
+                    <spam>Подписаться</spam>
+                    <svg class="send-email" width="24px" height="24px">
+                        <use href="./images/icon/icons.svg#send"></use>
+                    </svg>
+                </button> 
+            </form>
+         
+        </div>
+
     </div>
 </footer>
     

@@ -442,8 +442,8 @@
                      <label for="mail_news" class="sbscr">E-mail</label>
                     </div>
                     <button type="submit" class="subscribe-btn">
-                        <spam>Подписаться</spam>
-                        <svg class="send-email" width="24px" height="24px">
+                        Подписаться
+                        <svg class="send-email" width="24" height="24">
                         <use href="./images/icon/icons.svg#send"></use>
                     </svg>
                 </button> 
@@ -461,6 +461,54 @@
                     <use href="./images/icon/icons.svg#close_black"></use>
                 </svg>
             </button>
+
+            <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+            <div class="form-holder">
+                
+                <label for="user-name" class="form-field">
+                    <input type="text" name="user_name" id="user-name" class="form-imput"  minlength="5"/>
+                    <span class="form-name">Имя</span>
+                    <span class="">
+                        <svg class="form-icon" width="18" height="18">
+                            <use href="./images/icon/icons.svg#person_black"></use>
+                        </svg>
+                    </span>
+                </label>
+
+                <label for="user-phone" class="form-field">
+                    <input type="tel" name="user_phone" id="user-phone" class="form-imput" />
+                    <span class="form-name">Телефон</span>
+                    <span class="">
+                        <svg class="form-icon" width="18" height="18">
+                            <use href="./images/icon/icons.svg#phone_black"></use>
+                        </svg>
+                    </span>
+                </label>
+
+                <label for="user-mail" class="form-field">
+                    <span class="form-name">Почта</span>
+                    <input type="email" name="user_mail" id="user-mail" class="form-imput" />
+                    <span class="">
+                        <svg class="form-icon" width="18" height="18">
+                            <use href="./images/icon/icons.svg#email_black"></use>
+                        </svg>
+                    </span>
+                </label>
+
+                <label for="textarea" class="area-hold">
+                    <textarea name="textarea" id="textarea" cols="30" rows="10" class="form-area" placeholder="Введите текст"></textarea>
+                    <span class="form-name">Комментарий </span>
+                </label>
+
+                <label for="check" class="i-agree">
+                    <input type="checkbox" class="checkbox-form" id="check" required value="check"/>
+                    Соглашаюсь с рассылкой и принимаю 
+                    <a href="#" class="contract">Условия договора</a>
+                    <span class="check-icon"></span>
+                </label>
+
+                <button type="submit" class="send-form">Отправить</button>
+            </div>
         </div>
     </div>
         <!-- Підключення JS -->

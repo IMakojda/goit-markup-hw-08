@@ -561,6 +561,7 @@ address p {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   opacity: 1;
+  transition: opacity var(--trans-direct) var(--timing-function);
 }
 
 .mail-sbscr:focus + .sbscr,
@@ -585,6 +586,7 @@ address p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: var(--text-hero-section-logo-light);
+  padding-left: 10px;
  
 }
 .subscribe-btn{
@@ -634,8 +636,13 @@ transform: translate(-50%, -50%) scale(1.2);
   top: 50%;
   left: 50%;
 
-  height: 581px;
-  width: 528px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  min-height: 581px;
+  min-width: 528px;
   border-radius: 4px;
   background-color: var(--text-hero-section-logo-light);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -659,12 +666,179 @@ transform: translate(-50%, -50%) scale(1.2);
   border-radius:50%;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
 }
+
 .close-btn {
   fill:var(--logo-color-dark);
+  transition: fill var(--trans-direct) var(--timing-function);
+}
+
+.close-modal:focus .close-btn,
+.close-modal:hover .close-btn {
+  fill: var(--akcent-color);
+}
+
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.form-title {
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--text-title-color-btn-dark);
+  margin-bottom: 12px;
+}
+
+.form-field {
+  position: relative;
+  width: 448px;
+  height: 58px;
+  padding-top: 18px;
+  margin-bottom: 10px;
+}
+
+.form-imput {
+  appearance:none;
+  width: 448px;
+  height: 40px;
+  padding-left: 30px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  transition: border var(--trans-direct) var(--timing-function);
 }
 
 
+.form-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-subtitle-color);
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  fill: var(--text-title-color-btn-dark);
+  transition: fill var(--trans-direct) var(--timing-function);
+}
+
+.area-hold {
+  position: relative;
+  width: 448px;
+  height: 138px;
+  padding-top: 18px;
+  margin-bottom: 20px;
+}
+
+.form-area {
+  resize: none;
+  width: 448px;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  color: var(--text-title-color-btn-dark);
+  outline: none;
+  transition: border var(--trans-direct) var(--timing-function);
+  }
+
+ 
+.form-imput:focus{
+  border: 1px solid var(--akcent-color);
+ 
+ }
+.form-area:focus {
+  border:1px solid var(--akcent-color);
+}
+.form-field:focus-within .form-icon {
+  fill: var(--akcent-color);
+}
+.i-agree input {
+ visibility: hidden;
+}
+
+.i-agree {
+  position: relative;
+  display: inline-block;
+  padding-left: 4px;
+  width: 423px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-subtitle-color);
+  transition:  background-image var(--trans-direct) var(--timing-function);
+}
+
+.checkbox-form {
+  outline: none;
+}
+.checkbox-form:checked ~ .check-icon {
+background-image: url(/images/icon/modal_icon/icon_check.svg);
+}
+
+.checkbox-form input:focus ~.check-icon {
+  background-image:url(/images/icon/modal_icon/icon_off.svg);
+}
+
+.i-agree:focus-within .check-icon {
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 1px solid var(--akcent-color);
+  background-image: none;
+}
+.contract {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  color: var(--akcent-color);
+}
+
+.check-icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 15px;
+  background-image: url(/images/icon/modal_icon/icon_off.svg);
+  background-size: 100% 100%;
+  transition:background-image var(--trans-direct) var(--timing-function) ;
+}
+.send-form {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  background: var(--akcent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--text-hero-section-logo-light);
+  transition:background-color var(--trans-direct) var(--timing-function) ;
+}
+.send-form:hover,
+.send-form:focus {
+  background-color: #188CE8;
+}
 /* Portfolio Page*/
 .curent-btn {
   background-color: var(--akcent-color);
