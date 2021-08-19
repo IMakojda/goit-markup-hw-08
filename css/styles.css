@@ -798,7 +798,7 @@ background-image: url(../images/icon/iconcheck.svg);
 }
 
 .checkbox-form input:focus ~.check-icon {
-  background-image:url(../images/icon/iconoff.svg);
+  background-image: url(../images/icon/iconoff.svg);
 }
 
 .i-agree:focus-within .check-icon {
@@ -831,7 +831,7 @@ background-image: url(../images/icon/iconcheck.svg);
   display: block;
   width: 16px;
   height: 15px;
-  background-image: url(../images/icon/iconoff.svg);
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.222 1.667v11.666H1.778V1.667h12.444zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0z' fill='%23212121'/%3E%3C/svg%3E");
   background-size: 100% 100%;
   transition:background-image var(--trans-direct) var(--timing-function) ;
 }
