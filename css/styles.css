@@ -569,7 +569,7 @@ address p {
   opacity: 0;
 }
 
-.newsletter-legend {
+.newsletter-title {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -596,17 +596,21 @@ address p {
   padding-left: 29px;
   width: 200px;
   height: 50px;
-  background: var(--akcent-color);
+  background-color: var(--akcent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--text-hero-section-logo-light);
+  transition: background-color var(--trans-direct) var(--timing-function);
 }
 
 .send-email {
   fill: var(--text-hero-section-logo-light);
   margin-left: 10px;
 }
-
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+ background-color: #188CE8;
+}
 
 
 /* Modal window */
@@ -631,6 +635,7 @@ address p {
 .backdrop.is-hidden .modal{
 transform: translate(-50%, -50%) scale(1.2);
 }
+
 .modal {
   position: absolute;
   top: 50%;
@@ -666,7 +671,7 @@ transform: translate(-50%, -50%) scale(1.2);
   border-radius:50%;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  outline: none;
+  
 }
 
 .close-btn {
@@ -713,7 +718,6 @@ transform: translate(-50%, -50%) scale(1.2);
   transition: border var(--trans-direct) var(--timing-function);
 }
 
-
 .form-name {
   position: absolute;
   top: 0;
@@ -755,7 +759,6 @@ transform: translate(-50%, -50%) scale(1.2);
   outline: none;
   transition: border var(--trans-direct) var(--timing-function);
   }
-
  
 .form-imput:focus{
   border: 1px solid var(--akcent-color);
@@ -764,9 +767,11 @@ transform: translate(-50%, -50%) scale(1.2);
 .form-area:focus {
   border:1px solid var(--akcent-color);
 }
+
 .form-field:focus-within .form-icon {
   fill: var(--akcent-color);
 }
+
 .i-agree input {
  visibility: hidden;
 }
@@ -787,6 +792,7 @@ transform: translate(-50%, -50%) scale(1.2);
 .checkbox-form {
   outline: none;
 }
+
 .checkbox-form:checked ~ .check-icon {
 background-image: url(/images/icon/modal_icon/icon_check.svg);
 }
@@ -802,6 +808,7 @@ background-image: url(/images/icon/modal_icon/icon_check.svg);
   border: 1px solid var(--akcent-color);
   background-image: none;
 }
+
 .contract {
   font-size: 14px;
   line-height: 1.71;
@@ -821,6 +828,7 @@ background-image: url(/images/icon/modal_icon/icon_check.svg);
   background-size: 100% 100%;
   transition:background-image var(--trans-direct) var(--timing-function) ;
 }
+
 .send-form {
   margin-top: 30px;
   width: 200px;
@@ -835,11 +843,14 @@ background-image: url(/images/icon/modal_icon/icon_check.svg);
   color: var(--text-hero-section-logo-light);
   transition:background-color var(--trans-direct) var(--timing-function) ;
 }
+
 .send-form:hover,
 .send-form:focus {
   background-color: #188CE8;
 }
+
 /* Portfolio Page*/
+
 .curent-btn {
   background-color: var(--akcent-color);
   color: var(--text-hero-section-logo-light);
@@ -875,6 +886,7 @@ background-image: url(/images/icon/modal_icon/icon_check.svg);
   margin-bottom: 50px;
   transition:color var(--trans-direct) var(--timing-function), box-shadow var(--trans-direct) var(--timing-function), background-color var(--trans-direct) var(--timing-function);
 }
+
 button {
   font-family: inherit;
   background-color: #f5f4fa;
@@ -888,9 +900,11 @@ button {
   color: var(--text-title-color-btn-dark);
   cursor: pointer;
 }
+
 button:not(:last-child) {
   margin-right: 8px;
 }
+
 /* main page style portfolio  */
 
 .portfolio-set {
@@ -911,6 +925,7 @@ button:not(:last-child) {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .card-poster {
   box-shadow: none;
   display: block;
@@ -939,8 +954,8 @@ button:not(:last-child) {
 .card-poster:hover .work-description {
   transform: translateY(0);
   opacity: 1;
-  
- }
+}
+
 .tehno-anagraph {
   font-size: 18px;
   line-height: 1.5;
