@@ -794,11 +794,11 @@ transform: translate(-50%, -50%) scale(1.2);
 }
 
 .checkbox-form:checked ~ .check-icon {
-background-image: url(/images/icon/icon_check.svg);
+background-image: url(/images/icon/iconcheck.svg);
 }
 
 .checkbox-form input:focus ~.check-icon {
-  background-image:url(/images/icon/icon_off.svg);
+  background-image:url(/images/icon/iconoff.svg);
 }
 
 .i-agree:focus-within .check-icon {
@@ -824,7 +824,7 @@ background-image: url(/images/icon/icon_check.svg);
   display: block;
   width: 16px;
   height: 15px;
-  background-image: url(/images/icon/icon_off.svg);
+  background-image: url(/images/icon/iconoff.svg);
   background-size: 100% 100%;
   transition:background-image var(--trans-direct) var(--timing-function) ;
 }
