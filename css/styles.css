@@ -786,6 +786,7 @@ transform: translate(-50%, -50%) scale(1.2);
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-subtitle-color);
+  background-image: none;
   transition:  background-image var(--trans-direct) var(--timing-function);
 }
 
@@ -806,7 +807,14 @@ background-image: url(/images/icon/iconcheck.svg);
   height: 15px;
   border-radius: 2px;
   border: 1px solid var(--akcent-color);
-  background-image: none;
+  
+}
+
+.form-area::placeholder {
+  font-size: 12px;
+  line-height: 1,17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .contract {
