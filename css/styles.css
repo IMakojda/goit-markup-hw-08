@@ -831,7 +831,7 @@ background-image: url(./images/icon/iconcheck.svg);
   display: block;
   width: 16px;
   height: 15px;
-  background-image: url(./images/icon/iconoff.svg);
+  background-image: url(images/icon/iconoff.svg);
   background-size: 100% 100%;
   transition:background-image var(--trans-direct) var(--timing-function) ;
 }
