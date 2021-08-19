@@ -786,7 +786,6 @@ transform: translate(-50%, -50%) scale(1.2);
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-subtitle-color);
-  background-image: none;
   transition:  background-image var(--trans-direct) var(--timing-function);
 }
 
@@ -795,11 +794,11 @@ transform: translate(-50%, -50%) scale(1.2);
 }
 
 .checkbox-form:checked ~ .check-icon {
-background-image: url(/images/icon/iconcheck.svg);
+background-image: url(./images/icon/iconcheck.svg);
 }
 
 .checkbox-form input:focus ~.check-icon {
-  background-image:url(/images/icon/iconoff.svg);
+  background-image:url(./images/icon/iconoff.svg);
 }
 
 .i-agree:focus-within .check-icon {
@@ -807,7 +806,7 @@ background-image: url(/images/icon/iconcheck.svg);
   height: 15px;
   border-radius: 2px;
   border: 1px solid var(--akcent-color);
-  
+  background-image: none;
 }
 
 .form-area::placeholder {
@@ -832,7 +831,7 @@ background-image: url(/images/icon/iconcheck.svg);
   display: block;
   width: 16px;
   height: 15px;
-  background-image: url(/images/icon/iconoff.svg);
+  background-image: url(./images/icon/iconoff.svg);
   background-size: 100% 100%;
   transition:background-image var(--trans-direct) var(--timing-function) ;
 }
