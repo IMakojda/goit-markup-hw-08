@@ -140,7 +140,7 @@ img {
   justify-content: space-between;
 }
 
-.nav-holder {
+.nav-bar-whith-logo {
   display: flex;
   align-items: center;
   height: 80px;
@@ -169,12 +169,9 @@ img {
 
 /* contact  */
 
-.contact-holder {
+.contact-box-list {
   display: flex;
   align-items: center;
-}
-.contact-box-list {
-  display: inline-flex;
 }
 .contact {
   display: flex;
@@ -894,7 +891,7 @@ background-image: url(../images/icon/iconcheck.svg);
   transition:color var(--trans-direct) var(--timing-function), box-shadow var(--trans-direct) var(--timing-function), background-color var(--trans-direct) var(--timing-function);
 }
 
-button {
+.filter-btn {
   font-family: inherit;
   background-color: #f5f4fa;
   padding: 6px 22px;
@@ -908,7 +905,7 @@ button {
   cursor: pointer;
 }
 
-button:not(:last-child) {
+.filter-btn:not(:last-child) {
   margin-right: 8px;
 }
 
