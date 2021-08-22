@@ -19,24 +19,21 @@ body {
   background-color: var(--text-hero-section-logo-light);
   letter-spacing: 0.03em;
 }
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 button {
   border: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
+
 a {
   list-style: none;
   text-decoration: none;
@@ -47,6 +44,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .container-leveling-pages {
   margin-left: auto;
   margin-right: auto;
@@ -54,10 +52,12 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .section-pading {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .header__title--visibility-hidden {
   visibility: hidden;
   position: absolute;
@@ -66,9 +66,9 @@ img {
   height: 1px;
   margin: -1px;
 }
-/*studia page font style*/
 
 /* header font style  */
+
 .logo {
   font-family: Raleway;
   font-weight: var(--font-weight-bold);
@@ -130,9 +130,8 @@ img {
   color: var(--akcent-color);
 }
 
-
-
 /* logo+navbar  */
+
 .header {
   height: 80px;
   border-bottom: 1px solid #ececec;
@@ -152,9 +151,11 @@ img {
 .nav-bar__item {
   display: inline-block;
 }
+
 .nav-bar__item:not(:last-child) {
   margin-right: 50px;
 }
+
 .nav-bar__link--current {
   position: relative;
 }
@@ -256,6 +257,7 @@ img {
   margin-left: calc(-1 * var(--set-gap));
   margin-top: calc(-1 * var(--set-gap));
 }
+
 .advantages-list > .advantages-list__card{
   flex-basis: calc(100% / 4 - var(--set-gap));
   margin-left: var(--set-gap);
@@ -420,7 +422,6 @@ img {
 .social-network__link:focus {
   fill: var(--text-hero-section-logo-light);
   background-color: var(--akcent-color);
-  
 }
 
 .social-network__link:not(:last-child) {
@@ -631,7 +632,6 @@ address p {
  background-color: #188CE8;
 }
 
-
 /* Modal window */
 
 .backdrop {
@@ -784,8 +784,8 @@ transform: translate(-50%, -50%) scale(1.2);
  
 .registration-form__input:focus{
   border: 1px solid var(--akcent-color);
- 
-}
+ }
+
 .registration-form__area-input:focus {
   border:1px solid var(--akcent-color);
 }
@@ -880,7 +880,7 @@ background-image: url(../images/icon/iconcheck.svg);
 
 /* Portfolio Page*/
 
-.curent-btn {
+.portfolio-filters__buttons--curent-btn {
   background-color: var(--akcent-color);
   color: var(--text-hero-section-logo-light);
 }
