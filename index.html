@@ -21,7 +21,7 @@
     <header class="header">
         <h2 class="header__title header__title--visibility-hidden">Шапка сайту</h2>
         
-        <div class="container container--placement-header">
+        <div class="nav-tools container-leveling-pages">
 
             <nav class="navigation">
 
@@ -64,15 +64,18 @@
     <main>
         <!-- Ефективне рішення -->
         <section class="baner">
-            <div class="hero container ">
+            <div class="hero container-leveling-pages">
                 <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
                 <button data-modal-open type="button" class="hero__btn" aria-label="Заказать услугу">Заказать услугу</button>
             </div>
         </section>
         <!-- Наші переваги -->
-        <section class="our-advantages section">
-            <div class="container">
-                <h2 class="our-advantages-title header__title--visibility-hidden">Наши преимущества</h2> <!-- Скритий заголовок -->
+        <section class="our-advantages section-pading">
+
+            <div class="advantages container-leveling-pages">
+
+                <h2 class="advantages__title header__title--visibility-hidden">Наши преимущества</h2> <!-- Скритий заголовок -->
+                
                 <ul class="advantages-list">
 
                     <li class="advantages-list__card">
@@ -118,14 +121,17 @@
                         <p class="advantages-list__description">Значимость этих проблем настолько очевидна, что реализация
                             плановых заданий.</p>
                     </li>
+
                 </ul>
+
             </div>
+
         </section>
 
         <!-- Чим ми займаємся -->
-        <section class="we-do section ">
-            <div class="container ">
-                <h2 class="we-do__title">Чем мы занимаемся</h2>
+        <section class="we-do section-pading ">
+            <div class="we-works container-leveling-pages">
+                <h2 class="we-works__title">Чем мы занимаемся</h2>
               
                 <ul class="we-do-list">
                    
@@ -164,9 +170,9 @@
             </div>
         </section>
         <!-- Наша команда -->
-        <section class="team section">
-            <div class="container">
-                <h2 class="team__title ">Наша команда</h2>
+        <section class="team section-pading">
+            <div class="brigade container-leveling-pages">
+                <h2 class="brigade__title ">Наша команда</h2>
                 <ul class="team-list team-card-holder ">
 
                     <li class="team-list__item">
@@ -335,9 +341,10 @@
             </div>
         </section>
         <!-- Наші клієнти -->
-        <section class="our-client section">
+        <section class="our-client section-pading">
 
-            <div class="clients container">
+            <div class="clients container-leveling-pages">
+
                 <h2 class="clients__title">Постоянные клиенты</h2>
                 
                 <ul class="clients-list">
@@ -404,7 +411,7 @@
         <!-- Футер -->
     <footer class="footer">
 
-        <div class="footer-holder container ">
+        <div class="footer-holder container-leveling-pages">
 
             <div class="footer-contact">
 
@@ -493,65 +500,71 @@
         </div>
     </footer>
         <!-- Модальне вікно -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop backdrop--is-hidden" data-modal>
+
         <div class="modal">
-            <button data-modal-close class="close-modal">
-                <svg class="close-btn" width="18" height="18">
+
+            <button data-modal-close class="modal__button-close">
+
+                <svg class="modal__icon" width="18" height="18">
                     <use href="./images/icon/icons.svg#close_black"></use>
                 </svg>
+
             </button>
 
-            <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-            <div class="form-holder">
+            <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+            
+            <div class="registration-form">
                 
-                <label for="user-name" class="form-field">
-                    <input type="text" name="user_name" id="user-name" class="form-imput"  minlength="5"/>
-                    <span class="form-name">Имя</span>
+                <label for="user-name" class="registration-form__field">
+                    <input type="text" name="user_name" id="user-name" class="registration-form__input"  minlength="5"/>
+                    <span class="registration-form__name">Имя</span>
                     <span class="">
-                        <svg class="form-icon" width="18" height="18">
+                        <svg class="registration-form__icon" width="18" height="18">
                             <use href="./images/icon/icons.svg#person_black"></use>
                         </svg>
                     </span>
                 </label>
 
-                <label for="user-phone" class="form-field">
-                    <input type="tel" name="user_phone" id="user-phone" class="form-imput" />
-                    <span class="form-name">Телефон</span>
+                <label for="user-phone" class="registration-form__field">
+                    <input type="tel" name="user_phone" id="user-phone" class="registration-form__input" />
+                    <span class="registration-form__name">Телефон</span>
                     <span class="">
-                        <svg class="form-icon" width="18" height="18">
+                        <svg class="registration-form__icon" width="18" height="18">
                             <use href="./images/icon/icons.svg#phone_black"></use>
                         </svg>
                     </span>
                 </label>
 
-                <label for="user-mail" class="form-field">
-                    <span class="form-name">Почта</span>
-                    <input type="email" name="user_mail" id="user-mail" class="form-imput" />
+                <label for="user-mail" class="registration-form__field">
+                    <span class="registration-form__name">Почта</span>
+                    <input type="email" name="user_mail" id="user-mail" class="registration-form__input" />
                     <span class="">
-                        <svg class="form-icon" width="18" height="18">
+                        <svg class="registration-form__icon" width="18" height="18">
                             <use href="./images/icon/icons.svg#email_black"></use>
                         </svg>
                     </span>
                 </label>
 
-                <label for="textarea" class="area-hold">
-                    <textarea name="textarea" id="textarea" cols="30" rows="10" class="form-area" placeholder="Введите текст"></textarea>
-                    <span class="form-name">Комментарий </span>
+                <label for="textarea" class="registration-form__area">
+                    <textarea name="textarea" id="textarea" cols="30" rows="10" class="registration-form__area-input" placeholder="Введите текст"></textarea>
+                    <span class="registration-form__name">Комментарий </span>
                 </label>
 
-                <label for="check" class="i-agree">
-                    <input type="checkbox" class="checkbox-form" id="check" required value="check"/>
+                <label for="check" class="registration-form__checkbox">
+                    <input type="checkbox" class="registration-form__checkbox-input" id="check" required value="check"/>
                     Соглашаюсь с рассылкой и принимаю 
                     <a href="#" class="contract">Условия договора</a>
                     <span class="check-icon"></span>
                 </label>
 
-                <button type="submit" class="send-form">Отправить</button>
+                <button type="submit" class="registration-form__button-send">Отправить</button>
             </div>
         </div>
-    </div>
-        <!-- Підключення JS -->
-    <script src="./js/modal.js"></script>
+
+        
+<script src="./js/modal.js"></script>
+
 </body>
 
 </html>
