@@ -90,7 +90,8 @@ img {
   margin-left: 93px;
 }
 
-.nav-bar a {
+.nav-bar__link {
+  display: block;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px; /* навігація сайту*/
@@ -102,15 +103,11 @@ img {
   transition-timing-function: var(--timing-function);
 }
 
-.nav-bar a:hover,
-.nav-bar a:focus {
-  text-decoration: none; /* фокус кнопок навігації*/
-  color: var(--akcent-color);
-  
+.nav-bar__link:hover,
+.nav-bar__link:focus {
+  color: var(--akcent-color); /* фокус кнопок навігації*/
 }
-.nav-bar__link,.nav-bar__link--current{
-  display: block;
-}
+
 .nav-bar .nav-bar__link--current {
   text-decoration: none;
   color: var(--akcent-color); /* фокус ссилок навігації*/
@@ -131,7 +128,7 @@ img {
   color: var(--akcent-color);
 }
 
-/* header flex style  */
+
 
 /* logo+navbar  */
 .header {
@@ -147,7 +144,6 @@ img {
   display: flex;
   align-items: center;
   height: 80px;
-  
 }
 
 .nav-bar__item {
@@ -177,12 +173,14 @@ img {
   display: flex;
   align-items: center;
 }
+
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contacts__link {
   display: flex;
   align-items: center;
-}
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contacts__icon {
@@ -192,7 +190,7 @@ img {
 
 /* hero section font style  */
 
-.hero-section {
+.baner {
   font-family: inherit;
   max-width: 1600px;
   height: 600px;
@@ -211,7 +209,7 @@ img {
   background-position: center;
 }
 
-.main-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -222,7 +220,7 @@ img {
   margin-bottom: 30px;
 }
 
-.btn-order-service {
+.hero__btn {
   padding: 10px 32px;
   display: block;
   margin: 0 auto;
@@ -240,8 +238,8 @@ img {
   transition-timing-function:var(--timing-function);
 }
 
-.btn-order-service:hover,
-.btn-order-service:focus{
+.hero__btn:hover,
+.hero__btn:focus{
   background-color: rgba(24, 140, 232, 1);
   
 }
@@ -255,13 +253,23 @@ img {
   margin-left: calc(-1 * var(--set-gap));
   margin-top: calc(-1 * var(--set-gap));
 }
-.advantages-list > .item-card {
+.advantages-list > .advantages-list__card{
   flex-basis: calc(100% / 4 - var(--set-gap));
   margin-left: var(--set-gap);
   margin-top: var(--set-gap);
 }
 
-.advantages-title {
+.advantages-list__hold {
+  padding: 25px 100px;
+  background: var(--background-section);
+  border-radius: 4px;
+}
+
+.advantages-list__icon{
+  display: block;
+}
+
+.advantages-list__title {
   font-weight: var(--font-weight-bold); /* секція наші переваги*/
   font-size: 14px;
   line-height: 1.14;
@@ -269,24 +277,18 @@ img {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.advantages-description {
+
+.advantages-list__description {
   font-size: 14px; /* секція наші переваги*/
   line-height: 1.71;
   color: var(--text-subtitle-color);
 }
-.icon-advant {
-  display: block;
-}
-.icon-hold {
-  padding: 25px 100px;
-  background: var(--background-section);
-  border-radius: 4px;
-}
+
 /* what do you do  */
 .we-do {
   padding-top: 0;
 }
-.what-we-do {
+.we-do__title {
   font-weight: var(--font-weight-bold);
   font-size: 36px;
   line-height: 1.16;
@@ -301,23 +303,23 @@ img {
   margin-left: calc(-1 * var(--set-gap));
   margin-top: calc(-1 * var(--set-gap));
 }
-.we-do-item {
+.we-do-list__item {
   display: block;
   width: 370px;
 }
-.we-do-list > .we-do-item {
+.we-do-list > .we-do-list__item {
   flex-basis: calc(100% / 3 - var(--set-gap));
   margin-left: var(--set-gap);
   margin-top: var(--set-gap);
 }
 
-.link-image {
+.we-do-list__image-hold {
   position: relative;
 }
 
-.sign-holder {
+.we-do-list__sign-holder {
   background: rgba(47, 48, 58, 0.8);
-  width: 370px;
+  width: 100%;
   height: 70px;
   position: absolute;
   bottom: 0;
@@ -326,7 +328,7 @@ img {
   align-items: center;
 }
 
-.sign-image-doing {
+.we-do-list__description {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -334,62 +336,65 @@ img {
   text-transform: uppercase;
   color: var(--text-hero-section-logo-light);
 }
+
 /* Team  */
 .team {
   background-color: var(--background-section);
 }
-.card-element {
-  background-color: var(--text-hero-section-logo-light);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-.team-title {
+
+.team__title {
   font-weight: var(--font-weight-bold);
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   margin-bottom: 50px;
 }
-.profession {
-  font-size: 16px;
-  line-height: 1.18;
-  color: var(--text-subtitle-color);
-}
-.team-card-sign {
-  font-size: 16px;
-  line-height: 1.18;
-}
-.team-card-holder {
+
+.team-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--set-gap));
   margin-top: calc(-1 * var(--set-gap));
 }
-.team-card-holder > .card-element {
+.team-list > .team-list__item {
   flex-basis: calc(100% / 4 - var(--set-gap));
   margin-left: var(--set-gap);
   margin-top: var(--set-gap);
 }
+
+.team-list__item {
+  background-color: var(--text-hero-section-logo-light);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .caption-pictures {
   text-align: center;
   padding: 30px 0;
 }
-.caption-pictures h3 {
+
+.caption-pictures__sign {
+  font-size: 16px;
+  line-height: 1.18;
   margin-bottom: 10px;
 }
-.profession {
+
+.caption-pictures__profession {
   margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.18;
+  color: var(--text-subtitle-color);
 }
 
-.social-link-holder {
+.social-network {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social-link {
+.social-network__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,17 +406,17 @@ img {
   transition-duration: var(--trans-direct);
   transition-timing-function:var(--timing-function);
 }
-.social-link:hover,
-.social-link:focus {
+.social-network__link:hover,
+.social-network__link:focus {
   fill: var(--text-hero-section-logo-light);
   background-color: var(--akcent-color);
   
 }
-.social-link:not(:last-child) {
+.social-network__link:not(:last-child) {
   margin-right: 10px;
 }
-
-.clients-title {
+/* Our clients */
+.clients__title {
   font-weight: var(--font-weight-bold);
   font-size: 36px;
   line-height: 1.16;
@@ -427,18 +432,13 @@ img {
   margin-left: calc(-1 * var(--set-gap));
   margin-top: calc(-1 * var(--set-gap));
 }
-.client-item {
+.clients-list__item {
   flex-basis: calc(100% / 6 - var(--set-gap));
   margin-left: var(--set-gap);
   margin-top: var(--set-gap);
 }
 
-.client-border {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.holder-svg-client {
+.clients-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,18 +451,18 @@ img {
   transition-timing-function:var(--timing-function);
 }
 
-.holder-svg-client:focus svg,
-.holder-svg-client:hover svg {
+.clients-list__link:focus svg,
+.clients-list__link:hover svg {
   fill: var(--akcent-color);
 }
 
-.holder-svg-client:focus,
-.holder-svg-client:hover {
+.clients-list__link:focus,
+.clients-list__link:hover {
   border: 1px solid var(--akcent-color);
   border-radius: 4px;
  }
 
-.icon-clients {
+.clients-list__icon {
   fill: var(--icon-color);
   transition-property: fill;
   transition-duration: var(--trans-direct);
@@ -480,14 +480,14 @@ img {
   color: var(--text-hero-section-logo-light);
 }
 
-footer {
+.footer {
   background-color: #2f303a;
   padding-top: 72px;
   padding-bottom: 60px;
 }
 
 
-.holder {
+.footer-holder {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -498,7 +498,7 @@ footer {
   margin-top: 20px;
 }
 
-.contact-footer {
+.footer-contact-list__link {
   text-decoration: none;
   font-size: 14px;
   line-height: 1,71;
@@ -506,7 +506,7 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.adress-line {
+.adress__line {
   font-size: 14px;
   line-height: 1.71;
   color: var(--text-hero-section-logo-light);
@@ -518,11 +518,18 @@ address p {
   margin-bottom: 9px;
 }
 
-.footer-item:not(:last-child) {
+.footer-contact-list__item:not(:last-child) {
   margin-bottom: 6px;
 }
 /* Social link footer style  */
-.basement-title {
+.join {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  margin-right: 93px;
+}
+
+.join__title {
   font-weight: var(--font-weight-bold);
   font-size: 14px;
   line-height: 1.14;
@@ -531,26 +538,48 @@ address p {
   color: var(--text-hero-section-logo-light);
   margin-bottom: 20px;
 }
-.basement {
-  width: 206px;
-  height: 80px;
-  margin-left: 70px;
-  margin-right: 93px;
-}
-.darken {
+
+.social-network__link--darken {
   fill: var(--text-hero-section-logo-light);
   background-color: rgba(255, 255, 255, 0.1);
 }
+/* Subscribe */
+.newsletter-subscribe__title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-hero-section-logo-light);
+}
 
-.form-subscribe{
+
+.form-subscribe {
   display: flex;
   align-items: center;
 }
 
-.sbscr-holder {
+.register {
   position: relative;
 }
-.sbscr {
+
+.register__input {
+  height: 50px;
+  width: 358px;
+  background-color: rgba(33, 150, 243, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--text-hero-section-logo-light);
+  padding-left: 10px;
+}
+
+.register__input + .register__label,
+.register__input:not(:placeholder-shown) + .register__label {
+  opacity: 0;
+}
+
+.register__label {
   position: absolute;
   top:15px;
   left: 16px;
@@ -562,32 +591,12 @@ address p {
   transition: opacity var(--trans-direct) var(--timing-function);
 }
 
-.mail-sbscr:focus + .sbscr,
-.mail-sbscr:not(:placeholder-shown) + .sbscr {
-  opacity: 0;
+.register__icon {
+  fill: var(--text-hero-section-logo-light);
+  margin-left: 10px;
 }
 
-.newsletter-title {
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--text-hero-section-logo-light);
-}
-
-.mail-sbscr{
-  height: 50px;
-  width: 358px;
-  background-color: rgba(33, 150, 243, 0);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  color: var(--text-hero-section-logo-light);
-  padding-left: 10px;
- 
-}
-.subscribe-btn{
+.register__button{
   margin-left: 12px;
   display: inline-flex;
   align-items: center;
@@ -601,12 +610,8 @@ address p {
   transition: background-color var(--trans-direct) var(--timing-function);
 }
 
-.send-email {
-  fill: var(--text-hero-section-logo-light);
-  margin-left: 10px;
-}
-.subscribe-btn:hover,
-.subscribe-btn:focus {
+.register__button:hover,
+.register__button:focus {
  background-color: #188CE8;
 }
 
