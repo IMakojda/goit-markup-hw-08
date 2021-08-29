@@ -1,0 +1,64 @@
+.social-network {
+    @extend %center-hold;
+    
+  .social-network__link{
+    @extend %center-hold;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $icon-color;
+    background-color:transparent; 
+    @include animation-efect (fill);
+    @include animation-efect (background-color);
+    
+    &:not(:last-child) {
+      margin-right: 10px;
+      }
+    &:hover,
+    &:focus {
+      fill: $text-hero-section-logo-light;
+      background-color: $akcent-color;
+      }
+  }      
+}
+
+//  Social link footer style  
+ 
+.join {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  margin-right: 93px;
+    
+  .join__title {
+    @extend %text-s;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    color: $text-hero-section-logo-light;
+    margin-bottom: 20px;
+  }
+}
+
+.social-network-dark {
+    @extend %center-hold;
+    
+  .social-network__link{
+    @extend %center-hold;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $text-hero-section-logo-light;
+    background-color:rgba(255, 255, 255, 0.1); 
+    @include animation-efect (fill);
+    @include animation-efect (background-color);
+    
+    &:not(:last-child) {
+      margin-right: 10px;
+      }
+    &:hover,
+    &:focus {
+      fill: $text-hero-section-logo-light;
+      background-color: $akcent-color;
+      }
+  }      
+}

@@ -1,0 +1,8 @@
+.logo-header {
+    @include logo($logo-color-dark);
+    padding: 24px 0px 25px 0;
+}
+
+.logo-footer {
+    @include logo($text-hero-section-logo-light);
+}

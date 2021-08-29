@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <!-- Шапка сторінки -->
     <header class="header">
-        <h2 class="header__title header__title--visibility-hidden">Шапка сайту</h2>
+        <h2 class="header__title page__title--visibility-hidden">Шапка сайту</h2>
         
-        <div class="nav-tools container-leveling-pages">
+        <div class="nav-tools">
 
             <nav class="navigation">
 
-                    <a href="./index.html" class="logo"><span class="logo__text">Web</span>Studio</a>
+                    <a href="./index.html" class="logo-header"><span class="logo__text">Web</span>Studio</a>
                     
                     <ul class="nav-bar">
                         <li class="nav-bar__item"><a href="./index.html" class="nav-bar__link">Студия</a></li>
@@ -58,17 +58,20 @@
     </header>
 <!-- Головна частина сторінки -->
     <main>
-        <Section class="portfolio-page section-pading">
+        <Section class="portfolio-page ">
+            
+            <h1 class="page__title--visibility-hidden">Наши работи</h1>
+            
+            <div class="portfolio">
 
-            <div class="portfolio container-leveling-pages">
-
-                    <h1 class="portfolio__title header__title--visibility-hidden">Наши работи</h1>
                     <div class="portfolio-filters">
+
                     <button type="button" class="portfolio-filters__buttons portfolio-filters__buttons--curent-btn" aria-label="Все">Все</button>
                     <button type="button" class="portfolio-filters__buttons" aria-label="Веб-сайты">Веб-сайты</button>
                     <button type="button" class="portfolio-filters__buttons" aria-label="Приложения">Приложения</button>
                     <button type="button" class="portfolio-filters__buttons" aria-label="Дизайн">Дизайн</button>
                     <button type="button" class="portfolio-filters__buttons" aria-label="Маркетинг">Маркетинг</button>
+                    
                     </div>
                         
                 <ul class="portfolio-set">
@@ -304,7 +307,7 @@
 
         <div class="footer-contact">
 
-            <a href="./index.html" class="logo logo--light"><span class="logo__text">Web</span>Studio</a>
+            <a href="./index.html" class="logo-footer"><span class="logo__text">Web</span>Studio</a>
             
             <address class="adress">
 
@@ -329,7 +332,7 @@
 
             <h2 class="join__title">присоединяйтесь</h2>
 
-            <div class="social-network">
+            <div class="social-network-dark">
 
                 <a href="#" class="social-network__link social-network__link--darken">
                     <svg class="social-network__icon" width="20px" height="20px">

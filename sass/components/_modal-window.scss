@@ -1,0 +1,227 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 1;
+  @include animation-efect (opacity);
+}
+  
+.backdrop.backdrop--is-hidden{
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  & .modal{
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  @extend %center-hold;
+  flex-direction: column;
+  padding: 40px;
+
+  min-height: 581px;
+  min-width: 528px;
+  border-radius: 4px;
+  background-color: $text-hero-section-logo-light;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%,-50%) scale(1);
+  @include animation-efect (transform);
+  
+  .modal__button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    @extend %center-hold;
+  
+    background-color: $text-hero-section-logo-light;
+    height: 30px;
+    width: 30px;
+    border-radius:50%;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    &:focus .modal__icon,
+    &:hover .modal__icon {
+    fill: $akcent-color;
+    }
+  }
+
+  .modal__icon {
+    fill:$logo-color-dark;
+    @include animation-efect (fill);
+  }
+
+  .modal__title {
+    font-weight: $font-weight-bold;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $text-title-color-btn-dark;
+    margin-bottom: 12px;
+  }
+}
+    
+  /* Form registration */
+  
+.registration-form {
+  @extend %center-hold;
+  flex-direction: column;
+}
+  
+.registration-form__field {
+  position: relative;
+  width: 448px;
+  height: 58px;
+  padding-top: 18px;
+  margin-bottom: 10px;
+
+  &:focus-within .registration-form__icon {
+    fill: $akcent-color;
+  }
+}
+  
+.registration-form__input {
+  appearance:none;
+  width: 448px;
+  height: 40px;
+  padding-left: 30px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  @include animation-efect (border);
+    
+  &:focus{
+  border: 1px solid $akcent-color;
+  }
+}
+  
+.registration-form__name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $text-subtitle-color;
+}
+  
+.registration-form__icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  fill: $text-title-color-btn-dark;
+  @include animation-efect (fill);
+}
+  
+.registration-form__area {
+  position: relative;
+  width: 448px;
+  height: 138px;
+  padding-top: 18px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1,17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+  
+.registration-form__area-input {
+  resize: none;
+  width: 448px;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  color: $text-title-color-btn-dark;
+  outline: none;
+  @include animation-efect (border);
+  
+  &:focus {
+    border:1px solid $akcent-color;
+  }
+}
+
+.registration-form__checkbox input {
+  visibility: hidden;
+ 
+  &:focus ~.check-icon {
+    background-image: url(../images/icon/iconoff.svg);
+  }
+}
+  
+.registration-form__checkbox{
+  position: relative;
+  display: inline-block;
+  padding-left: 4px;
+  width: 423px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-subtitle-color;
+  @include animation-efect (background-image);
+  
+  &:focus-within .check-icon {
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid $akcent-color;
+    background-image: none;
+  }
+  .contract {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+    color: $akcent-color;
+  }
+  .check-icon {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon/iconoff.svg);
+    background-size: 100% 100%;
+    @include animation-efect (background-image);
+  }
+}
+
+.registration-form__checkbox-input{
+  outline: none;
+
+  &:checked ~ .check-icon {
+    background-image: url(../images/icon/iconcheck.svg);
+  }
+}  
+  
+.registration-form__button-send {
+  @extend %btn-standart;
+
+  margin-top: 30px;
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em; 
+}
+  
+  

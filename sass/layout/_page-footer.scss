@@ -1,0 +1,12 @@
+/* footer font style  */
+.footer {
+  background-color: #2f303a;
+  padding-top: 72px;
+  padding-bottom: 60px;
+
+  .footer-holder {
+    @extend %container-leveling-pages;
+    @extend %center-hold;
+    align-items: baseline;
+  }
+}  

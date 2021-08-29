@@ -1,0 +1,26 @@
+
+// hero section
+.hero {
+  @extend %container-leveling-pages;
+  @extend %center-hold;
+  flex-direction: column;
+  
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    color: $text-hero-section-logo-light;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  .btn-hero {
+    @extend %btn-standart;
+  }
+}
+
+ 
+  
+
+  

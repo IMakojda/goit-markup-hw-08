@@ -1,0 +1,56 @@
+//  contact header 
+  
+.contacts {
+    @extend %center-hold;
+  
+    .contacts__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  
+  .contacts__link {
+    @extend %center-hold;
+    @extend %text-s;
+    @include animation-efect(color);
+    @include focus-link ($text-subtitle-color);
+     
+    &:hover,
+    &:focus {
+    @include focus-link ($akcent-color);
+    }
+  
+    .contacts__icon {
+      fill: currentColor;
+      margin-right: 8px;
+    }
+  }
+
+//   contacts footer
+
+.adress {
+    font-style: normal;
+    margin-top: 20px;
+      
+    .adress__line{
+      margin-top: 0;
+      margin-bottom: 9px;
+      font-size: 14px;
+      line-height: 1.71;
+      color: $text-hero-section-logo-light;
+    }
+}
+    
+.footer-contact-list{
+  
+    .footer-contact-list__link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1,71;
+    letter-spacing: 0.03em;        /* контакти футер*/
+    color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-contact-list__item:not(:last-child) {
+    margin-bottom: 6px;
+    }
+} 

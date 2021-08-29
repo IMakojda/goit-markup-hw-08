@@ -1,0 +1,48 @@
+ /* what do you do  */
+.we-do {
+  padding-top: 0;
+  @extend %section-pading;
+}
+
+.we-works {
+  @extend %container-leveling-pages;  
+
+  .we-works__title {
+    @extend %page-title-text;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+  
+.we-do-list {
+  @extend %column-wrap;
+  
+  & .we-do-list__item {
+    @include conums-amount(3);
+    display: block;
+    width: 370px;
+  }
+}
+
+.we-do-list__image-hold {
+  position: relative;
+}
+  
+.we-do-list__sign-holder {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+  
+  background: rgba(47, 48, 58, 0.8);
+  @extend %center-hold;
+
+  .we-do-list__description {
+    @extend %text-s;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $text-hero-section-logo-light;
+  }  
+}  

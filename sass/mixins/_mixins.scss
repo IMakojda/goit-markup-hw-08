@@ -1,0 +1,30 @@
+@mixin animation-efect ($efect) {
+transition: $efect $trans-direct $timing-function;
+}
+  
+@mixin focus-link($color) {
+color: $color;
+text-decoration: none;
+}
+
+@mixin conums-amount($number) {
+flex-basis: calc(100% / #{$number} - #{$set-gap});
+margin-left: $set-gap;
+margin-top: $set-gap;    
+}
+
+
+@mixin logo($text-color) {
+    font-family: $font-logo;
+    font-weight: $font-weight-bold;
+    font-size: 26px; /* лого хедер*/
+    line-height: 1.19;
+    text-decoration: none;
+    color: $text-color;
+
+    .logo__text {
+        color: $akcent-color;
+    }
+}  
+
+  

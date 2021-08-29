@@ -1,0 +1,48 @@
+ /* advantegse styles  */
+ .our-advantages {
+  @extend %section-pading;
+    
+    .advantages__title{
+     @extend %visibility-hidden;
+    }
+ }
+
+ .advantages{
+   @extend %container-leveling-pages;
+ }
+
+ .advantages-list {
+  @extend %column-wrap;
+        
+    &>.advantages-list__card{
+      @include conums-amount(4);
+    }
+} 
+   
+.advantages-list__hold {
+  padding: 25px 100px;
+  background: $background-section;
+  border-radius: 4px;
+
+  .advantages-list__icon{
+  display: block;
+  } 
+}
+  
+.advantages-list__card {
+
+  .advantages-list__title {
+    @extend %text-s;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .advantages-list__description {
+    font-size: 14px; /* секція наші переваги*/
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text-subtitle-color;
+  }
+}

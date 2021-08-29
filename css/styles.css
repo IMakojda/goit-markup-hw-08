@@ -58,7 +58,7 @@ img {
   padding-bottom: 94px;
 }
 
-.header__title--visibility-hidden {
+.page__title--visibility-hidden {
   visibility: hidden;
   position: absolute;
   clip: rect(0 0 0 0);

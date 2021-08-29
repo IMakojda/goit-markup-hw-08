@@ -1,0 +1,35 @@
+
+
+body {
+    font-family: $font-main, sans-serif;
+    color: $text-title-color-btn-dark;
+    background-color: $text-hero-section-logo-light;
+    letter-spacing: 0.03em;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  button {
+    border: none;
+  }
+  
+  h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+  }
+  
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+ 

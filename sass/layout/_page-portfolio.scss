@@ -1,0 +1,133 @@
+/* Portfolio Page*/
+.portfolio-page {
+  @extend %section-pading;
+  
+  .portfolio {
+    @extend %container-leveling-pages;
+  }
+}
+
+.page__title--visibility-hidden {
+  @extend %visibility-hidden;
+}
+
+.portfolio-filters__buttons--curent-btn {
+  background-color: $akcent-color;
+  color: $text-hero-section-logo-light;
+}
+  
+.portfolio-filters {
+  margin-bottom: 50px;
+  @extend %center-hold;
+  @include animation-efect (color);
+
+  .portfolio-filters__buttons {
+    font-family: inherit;
+    background-color: #f5f4fa;
+    padding: 6px 22px;
+    border-radius: 4px;
+    border: #f5f4fa;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: $text-title-color-btn-dark;
+    cursor: pointer;
+  
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &:focus,
+    &:hover {
+      color: $text-hero-section-logo-light;
+      background-color: $akcent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+  
+  /* main page style portfolio  */
+  
+  .portfolio-set {
+   @extend %column-wrap;
+   
+   .portfolio-set__item {
+    @include conums-amount(3);
+    }
+  }
+  
+  
+  
+.portfolio-set__link {
+  display: block;
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+  @include animation-efect (box-shadow);
+
+  &:hover,
+  &:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+  
+.image-thumb {
+  position: relative;
+  overflow: hidden;
+}
+  
+.work-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  transform: translateY(100%);
+  // opacity: 0;
+  @include animation-efect (transform);
+  // @include animation-efect (opacity);
+
+  .portfolio-set__link:hover & {
+  transform: translateY(0);
+  // opacity: 1;
+  }
+
+  .portfolio-set__item:focus-within &  {
+    transform: translateY(0);
+    // opacity: 1;
+  }
+  
+  .work-description__anagraph {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: $text-hero-section-logo-light;
+    text-align: center;
+  }
+}
+  
+/* Portfolio Cards */
+.card-contetnt {
+  text-align: start;
+  padding: 20px 24px;
+
+  .card-contetnt__sign{
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $text-title-color-btn-dark;
+    margin-bottom: 4px;
+  }
+
+  .card-contetnt__filter-work{
+    font-size: 16px;
+    line-height: 1.87;
+    color: $text-subtitle-color;
+    letter-spacing: 0.03em;
+  }
+} 
