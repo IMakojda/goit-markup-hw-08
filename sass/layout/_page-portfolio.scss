@@ -21,6 +21,12 @@
   margin-bottom: 40px;
   padding: 0 15px;
   @include animation-efect (color);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+  }
 
   .portfolio-filters__buttons {
     font-family: inherit;
@@ -40,7 +46,11 @@
     }
 
     &:nth-child(-n+3) {
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      } 
+    }
 
     &:focus,
     &:hover {
@@ -54,14 +64,24 @@
   
   /* main page style portfolio  */
   
-  // .portfolio-set {
-  //  @extend %column-wrap;
+.portfolio-set {
+  @media screen and (min-width: 768px){
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * 30px);
+  }
    
-  //  .portfolio-set__item {
-  //   @include conums-amount(3);
-  //   }
-  // }
   .portfolio-set__item {
+    @media screen and (min-width: 768px){ 
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;   
+    }
+  }
+}
+.portfolio-set__item {
     max-width: 450px;
     max-height: 404px;
     &:not(:last-child) {
@@ -97,18 +117,16 @@
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
-  transform: translateY(100%);
+  transform: translateY(101%);
   @include animation-efect (transform);
   
 
   .portfolio-set__link:hover & {
   transform: translateY(0);
-  
   }
 
   .portfolio-set__item:focus-within &  {
     transform: translateY(0);
-    
   }
   
   .work-description__anagraph {
