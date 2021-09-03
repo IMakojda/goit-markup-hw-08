@@ -1,0 +1,20 @@
+.soc-link-menu {
+    display: flex;
+    margin-top: 64px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    list-style: none;
+    li:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    a {
+        color: $akcent-color;
+    }
+    
+    @media screen and (min-width:768px) {
+    display: none;        
+    }
+}

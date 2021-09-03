@@ -1,10 +1,11 @@
 /* Portfolio Page*/
 .portfolio-page {
-  @extend %section-pading;
+  @extend %pading-mobile;
+  padding-top: 40px;
   
-  .portfolio {
-    @extend %container-leveling-pages;
-  }
+  // .portfolio {
+  //   @extend %container-leveling-pages;
+  // }
 }
 
 .page__title--visibility-hidden {
@@ -17,8 +18,8 @@
 }
   
 .portfolio-filters {
-  margin-bottom: 50px;
-  @extend %center-hold;
+  margin-bottom: 40px;
+  padding: 0 15px;
   @include animation-efect (color);
 
   .portfolio-filters__buttons {
@@ -38,6 +39,9 @@
         margin-right: 8px;
     }
 
+    &:nth-child(-n+3) {
+    margin-bottom: 15px;}
+
     &:focus,
     &:hover {
       color: $text-hero-section-logo-light;
@@ -50,14 +54,21 @@
   
   /* main page style portfolio  */
   
-  .portfolio-set {
-   @extend %column-wrap;
+  // .portfolio-set {
+  //  @extend %column-wrap;
    
-   .portfolio-set__item {
-    @include conums-amount(3);
+  //  .portfolio-set__item {
+  //   @include conums-amount(3);
+  //   }
+  // }
+  .portfolio-set__item {
+    max-width: 450px;
+    max-height: 404px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
-  }
-  
+
+}
   
   
 .portfolio-set__link {
@@ -87,18 +98,17 @@
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
   transform: translateY(100%);
-  // opacity: 0;
   @include animation-efect (transform);
-  // @include animation-efect (opacity);
+  
 
   .portfolio-set__link:hover & {
   transform: translateY(0);
-  // opacity: 1;
+  
   }
 
   .portfolio-set__item:focus-within &  {
     transform: translateY(0);
-    // opacity: 1;
+    
   }
   
   .work-description__anagraph {

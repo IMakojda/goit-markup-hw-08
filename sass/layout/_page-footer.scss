@@ -1,12 +1,22 @@
 /* footer font style  */
 .footer {
   background-color: #2f303a;
-  padding-top: 72px;
-  padding-bottom: 60px;
+  // padding-top: 72px;
+  // padding-bottom: 60px;
 
   .footer-holder {
-    @extend %container-leveling-pages;
-    @extend %center-hold;
-    align-items: baseline;
+  @extend %pading-mobile;
+  @extend %column-center;
   }
+  .footer-contact{
+  @extend %column-center;
+  margin-bottom: 60px;
+  }
+
+  .join {
+    @extend %column-center;
+    margin-bottom:60px;
+  }
+
+  
 }  

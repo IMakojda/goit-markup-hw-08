@@ -1,16 +1,21 @@
 //  contact header 
   
 .contacts {
-    @extend %center-hold;
-  
+    // @extend %center-hold;
+    margin-top: 302px;
+    display: flex;
+    flex-direction: column-reverse;
+    
     .contacts__item:not(:last-child) {
-      margin-right: 50px;
+      margin-top: 32px;
     }
   }
   
   .contacts__link {
-    @extend %center-hold;
-    @extend %text-s;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
     @include animation-efect(color);
     @include focus-link ($text-subtitle-color);
      
@@ -22,6 +27,9 @@
     .contacts__icon {
       fill: currentColor;
       margin-right: 8px;
+      @media screen and (max-width:767px) {
+        display: none;        
+      } 
     }
   }
 

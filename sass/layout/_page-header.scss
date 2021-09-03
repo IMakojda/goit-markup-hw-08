@@ -1,9 +1,21 @@
-.header {
-  @extend%container-leveling-pages;
-  height: 80px;
-  border-bottom: 1px solid #ececec;
+.header{
+  border-bottom: 1px solid #ececec; 
   
-  .header__title-visibility-hiden{
+    .header__title-visibility-hiden{
     @extend %visibility-hidden;
   }
-}
+
+  @include respond-to (mobile){
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 15px;
+  }
+
+  @include respond-to (desktop){
+    height: 80px;
+  }
+} 
+
+

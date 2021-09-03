@@ -1,7 +1,11 @@
  /* what do you do  */
 .we-do {
+  display: none;
   padding-top: 0;
   @extend %section-pading;
+  @media (min-width:1200px){
+    display: block;
+  }
 }
 
 .we-works {

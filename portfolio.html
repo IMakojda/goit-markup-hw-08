@@ -15,17 +15,34 @@
 <body>
     <!-- Шапка сторінки -->
     <header class="header">
-        <h2 class="header__title page__title--visibility-hidden">Шапка сайту</h2>
+        <h2 class="header__title-visibility-hiden">Шапка сайту</h2>
         
-        <div class="nav-tools">
+        <a href="./index.html" class="logo-header"><span class="logo__text">Web</span>Studio</a>   
+        
+        <button type="menu"
+        class="js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
 
+            <svg class="icon-close" width="24" height="16">
+                <use href="./images/icon/icons.svg#menu_mob"></use>
+            </svg>
+
+        </button>
+        
+        <div class="nav-tools  js-menu-container">
+            <button type="button" class="js-close-menu">
+                <svg class="icon-close" width="18" height="18">
+                    <use href="./images/icon/icons.svg#close_black"></use>
+                </svg>
+            </button>
             <nav class="navigation">
 
-                    <a href="./index.html" class="logo-header"><span class="logo__text">Web</span>Studio</a>
+                    
                     
                     <ul class="nav-bar">
-                        <li class="nav-bar__item"><a href="./index.html" class="nav-bar__link">Студия</a></li>
-                        <li class="nav-bar__item"><a href="./portfolio.html" class="nav-bar__link nav-bar__link--current">Портфолио</a></li>
+                        <li class="nav-bar__item"><a href="./index.html" class="nav-bar__link nav-bar__link--current">Студия</a></li>
+                        <li class="nav-bar__item"><a href="./portfolio.html" class="nav-bar__link">Портфолио</a></li>
                         <li class="nav-bar__item"><a href="" class="nav-bar__link">Контакты</a></li>
                     </ul>
 
@@ -34,7 +51,7 @@
                 <ul class="contacts">
                   
                     <li class="contacts__item">
-                        <a href="mailto:info@devstudio.com" class="contacts__link">
+                        <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--tel">
                             <svg class="contacts__icon" width="16px" height="12px">
                                 <use href="./images/icon/icons.svg#letter"></use>
                             </svg>
@@ -54,6 +71,12 @@
 
                 </ul>
 
+                <ul class="soc-link-menu">
+                    <li><a href="#" class="soc-link-menu-a">Instagram</a></li>
+                    <li><a href="#" class="soc-link-menu-a">Twitter</a></li>
+                    <li><a href="#" class="soc-link-menu-a">Facebook</a></li>
+                    <li><a href="#" class="soc-link-menu-a">LinkedIn</a></li>
+                </ul>
         </div>
     </header>
 <!-- Головна частина сторінки -->
@@ -81,9 +104,13 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/open_web_pages_on_laptop.jpg" 
-                                alt="Відкритий лептоп з веб стрінкою" 
-                                width="370" class="image-thumb__img">
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/1/open_web_pages_on_laptop_480.jpg 1x, ./images/portfolio/1/open_web_pages_on_laptop_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/1/open_web_pages_on_laptop_768.jpg 1x, ./images/portfolio/1/open_web_pages_on_laptop_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/1/open_web_pages_on_laptop_1200.jpg 1x, ./images/portfolio/1/open_web_pages_on_laptop_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/1/open_web_pages_on_laptop.jpg" alt="Відкритий лептоп з веб стрінкою">
+                                </picture>
+                                
 
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
@@ -104,9 +131,13 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/poster_new_orlean_vs_golden_star.jpg" 
-                                alt="Постер Нью Орлеан і Голден Стар" 
-                                width="370" class="image-thumb__img">
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/2/poster_new_orlean_vs_golden_star_480.jpg 1x, ./images/portfolio/2/poster_new_orlean_vs_golden_star_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/2/poster_new_orlean_vs_golden_star_768.jpg 1x, ./images/portfolio/2/poster_new_orlean_vs_golden_star_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/2/poster_new_orlean_vs_golden_star_1200.jpg 1x, ./images/portfolio/2/poster_new_orlean_vs_golden_star_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/2/poster_new_orlean_vs_golden_star.jpg" alt="Постер Нью Орлеан і Голден Стар">
+                                    </picture>
+                                
 
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
@@ -128,9 +159,12 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/logo_restaurant_seafood.jpg" 
-                                alt="Постер Ресторан Seafood" 
-                                width="370" class="image-thumb__img">
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/3/logo_restaurant_seafood_480.jpg 1x, ./images/portfolio/3/logo_restaurant_seafood_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/3/logo_restaurant_seafood_768.jpg 1x, ./images/portfolio/3/logo_restaurant_seafood_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/3/logo_restaurant_seafood_1200.jpg 1x, ./images/portfolio/3/logo_restaurant_seafood_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/3/logo_restaurant_seafood.jpg" alt="Постер Ресторан Seafood">
+                                    </picture>
 
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
@@ -153,10 +187,13 @@
                         <a href="#" class="portfolio-set__link">
                         
                             <div class="image-thumb">
-                                <img src="./images/portfolio/black_headphones.jpg" 
-                                alt="чорні наушники " 
-                                width="370" class="image-thumb__img">
-
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/4/black_headphones_480.jpg 1x, ./images/portfolio/4/black_headphones_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/4/black_headphones_768.jpg 1x, ./images/portfolio/4/black_headphones_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/4/black_headphones_1200.jpg 1x, ./images/portfolio/4/black_headphones_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/4/black_headphones.jpg" alt="чорні наушники">
+                                    </picture>
+                                
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
                                         Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.   
@@ -177,9 +214,12 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/two_box_white_and_wood.jpg" 
-                                alt="дві деревяні коробочки" 
-                                width="370" class="image-thumb__img">
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/5/two_box_white_and_wood_480.jpg 1x, ./images/portfolio/5/two_box_white_and_wood_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/5/two_box_white_and_wood_768.jpg 1x, ./images/portfolio/5/two_box_white_and_wood_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/5/two_box_white_and_wood_1200.jpg 1x, ./images/portfolio/5/two_box_white_and_wood_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/5/two_box_white_and_wood.jpg" alt="дві деревяні коробочки">
+                                    </picture>
 
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
@@ -201,10 +241,13 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/monitor_apple.jpg" 
-                                alt="Apple монитор з відкритою веб сторінкою " 
-                                width="370" class="image-thumb__img">
-
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/6/monitor_apple_480.jpg 1x, ./images/portfolio/6/monitor_apple_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/6/monitor_apple_768.jpg 1x, ./images/portfolio/6/monitor_apple_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/6/monitor_apple_1200.jpg 1x, ./images/portfolio/6/monitor_apple_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/6/monitor_apple.jpg" alt="Apple монитор з відкритою веб сторінкою ">
+                                    </picture>
+                                
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
                                         Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.   
@@ -225,10 +268,13 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/open_book.jpg" 
-                                alt="відкрита книжка" 
-                                width="370" class="image-thumb__img">
-
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='images/portfolio/7/open_book_480.jpg 1x, images/portfolio/7/open_book_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='images/portfolio/7/open_book_768.jpg 1x, images/portfolio/7/open_book_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='images/portfolio/7/open_book_1200.jpg 1x, images/portfolio/7/open_book_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/7/open_book.jpg" alt="відкрита книжка">
+                                    </picture>
+                                
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
                                         Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.   
@@ -249,10 +295,13 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/lab_el_tag.jpg" 
-                                alt="бирка" 
-                                width="370" class="image-thumb__img">
-
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/8/lab_el_tag_480.jpg 1x, ./images/portfolio/8/lab_el_tag_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/8/lab_el_tag_768.jpg 1x, ./images/portfolio/8/lab_el_tag_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/8/lab_el_tag_1200.jpg 1x, ./images/portfolio/8/lab_el_tag_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/8/lab_el_tag.jpg" alt="бирка">
+                                    </picture>
+                                
                                 <div class="work-description">
                                     <p class="work-description__anagraph">
                                         Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.   
@@ -273,9 +322,13 @@
                         <a href="#" class="portfolio-set__link">
 
                             <div class="image-thumb">
-                                <img src="./images/portfolio/open_web_pages_on_laptop.jpg" 
-                                alt="відкритий ноутбук  из зображенням" 
-                                width="370" class="image-thumb__img">
+                                <picture class="image-thumb__img">
+                                    <source media="(max-width: 767px)" srcset='./images/portfolio/9/work_on_laptop_480.jpg 1x, ./images/portfolio/9/work_on_laptop_480@2x.jpg 2x'/>
+                                    <source media="(min-width: 768px)" srcset='./images/portfolio/9/work_on_laptop_768.jpg 1x, ./images/portfolio/9/work_on_laptop_768@2x.jpg 2x'>
+                                    <source media="(min-width: 1200px)" srcset='./images/portfolio/9/work_on_laptop_1200.jpg 1x, ./images/portfolio/9/work_on_laptop_1200@2x.jpg 2x'>
+                                    <img src="./images/portfolio/9/work_on_laptop.jpg" alt="відкритий ноутбук из зображенням">
+                                    </picture>
+                                
 
                                 <div class="work-description">
                                     <p class="work-description__anagraph">

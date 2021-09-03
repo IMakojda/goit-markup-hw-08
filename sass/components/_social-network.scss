@@ -1,6 +1,6 @@
 .social-network {
     @extend %center-hold;
-    
+        
   .social-network__link{
     @extend %center-hold;
     width: 44px;
@@ -27,9 +27,7 @@
 .join {
   width: 206px;
   height: 80px;
-  margin-left: 70px;
-  margin-right: 93px;
-    
+     
   .join__title {
     @extend %text-s;
     font-weight: $font-weight-bold;

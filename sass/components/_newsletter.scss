@@ -9,21 +9,23 @@
         color: $text-hero-section-logo-light;
       }
         
-      .form-subscribe {
-        @extend %center-hold;
-      }
-        
+      // .form-subscribe {
+      //   @extend %center-hold;
+      // }
+      .newsletter-subscribe{
+        @extend %column-center;
+      }  
       .register {
         position: relative;
-      
+        @extend %column-center;
         .register__input {
           height: 50px;
-          width: 358px;
+          width: 450px;
           background-color: rgba(33, 150, 243, 0);
           border: 1px solid rgba(255, 255, 255, 0.3);
           border-radius: 4px;
           color: $text-hero-section-logo-light;
-          padding-left: 10px;
+          margin-bottom: 20px;
           
           &:focus + .register__label,
           &:not(:placeholder-shown) + .register__label {
@@ -49,7 +51,7 @@
         }
       
         .register__button{
-          margin-left: 12px;
+          margin: auto;
           padding-left: 29px;
           @extend %btn-standart;
           display: inline-flex;

@@ -1,0 +1,99 @@
+
+.nav-tools{
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+    height: 60px;
+
+    @media screen and (max-width: 767px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px;
+        background-color: #fff;
+        z-index: 999;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        opacity: 1;
+    }
+
+    .js-close-menu {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background-color: transparent;
+        @media(min-width: 768px){
+        display: none;
+        }
+        .icon-close {
+        fill:$logo-color-dark;
+        @include animation-efect (fill);
+        }
+
+        &:focus .icon-close,
+        &:hover .icon-close {
+        fill: $akcent-color;
+        }
+    }
+
+    .navigation {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: #212121;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            opacity: 1;
+        }
+    }
+}
+
+.nav-tools.is-open {
+    display: block;
+}
+
+.js-open-menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    @media (min-width: 767px) {
+        display: none;
+    }
+}
+
+.nav-bar {
+    .nav-bar__item {
+      display: block;
+      text-decoration: none;
+  
+      &:not(:last-child){
+      margin-bottom: 32px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.nav-bar__link {
+    @include animation-efect(color);
+    @include focus-link ($text-title-color-btn-dark);
+        
+    &:hover,
+    &:focus {
+    @include focus-link ($akcent-color);
+    }
+}

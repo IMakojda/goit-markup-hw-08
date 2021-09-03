@@ -1,11 +1,11 @@
 // Team section
 .team {
-  @extend %section-pading ;
+  @extend %pading-mobile;
   background-color: $background-section;
 }
 
 .brigade {
-  @extend %container-leveling-pages;
+  // @extend %container-leveling-pages;
   
   .brigade__title {
     font-weight: $font-weight-bold;
@@ -17,20 +17,36 @@
 }
 
 .team-list {
-  @extend %column-wrap;
-  
+  // @extend %column-wrap;
+  // @media (max-width:767px){
+  //   width: 450px;
+  //   height:622px;
+  // }
   & > .team-list__item {
-    @include conums-amount(4);
+    // @include conums-amount(1);
     background-color: $text-hero-section-logo-light;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    max-width: 450px;
+    max-height: 622px;
   }
 }
-   
+
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  
+  }
 .caption-pictures {
   text-align: center;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 24px;
 
   .caption-pictures__sign {
     @extend %text-m;

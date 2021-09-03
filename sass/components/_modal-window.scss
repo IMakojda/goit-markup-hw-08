@@ -21,6 +21,10 @@
 }
 
 .modal {
+  
+  height: 609px;
+  width: 450px; 
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,8 +33,8 @@
   flex-direction: column;
   padding: 40px;
 
-  min-height: 581px;
-  min-width: 528px;
+  // height: 581px;
+  // width: 528px;
   border-radius: 4px;
   background-color: $text-hero-section-logo-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -69,6 +73,11 @@
     letter-spacing: 0.03em;
     color: $text-title-color-btn-dark;
     margin-bottom: 12px;
+    text-align: center;
+    @media (max-width: 1200px) {
+      line-height: 1.5;
+    }
+
   }
 }
     
@@ -80,9 +89,13 @@
 }
   
 .registration-form__field {
-  position: relative;
-  width: 448px;
+  
   height: 58px;
+  width: 370px; 
+  
+  position: relative;
+  // width: 448px;
+  // height: 58px;
   padding-top: 18px;
   margin-bottom: 10px;
 
@@ -93,7 +106,7 @@
   
 .registration-form__input {
   appearance:none;
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding-left: 30px;
   border-radius: 4px;
@@ -127,7 +140,7 @@
   
 .registration-form__area {
   position: relative;
-  width: 448px;
+  width: 370px;
   height: 138px;
   padding-top: 18px;
   margin-bottom: 20px;
@@ -142,10 +155,10 @@
   
 .registration-form__area-input {
   resize: none;
-  width: 448px;
+  width: 370px;
   height: 120px;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   padding: 12px 16px;
   border-radius: 4px;
@@ -171,10 +184,13 @@
   position: relative;
   display: inline-block;
   padding-left: 4px;
-  width: 423px;
-  height: 24px;
-  font-size: 14px;
-  line-height: 1.71;
+  width: 370px;
+  height: 15px;
+  // font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: $text-subtitle-color;
   @include animation-efect (background-image);
@@ -187,15 +203,17 @@
     background-image: none;
   }
   .contract {
-    font-size: 14px;
-    line-height: 1.71;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
     text-decoration: underline;
     color: $akcent-color;
   }
   .check-icon {
     position: absolute;
-    top: 5px;
+    top: 0;
     left: 0;
     display: block;
     width: 16px;
