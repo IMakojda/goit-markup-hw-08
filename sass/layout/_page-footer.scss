@@ -1,29 +1,56 @@
 /* footer font style  */
 .footer {
   background-color: #2f303a;
-  // padding-top: 72px;
-  // padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
 
   .footer-holder {
   @extend %pading-mobile;
   @extend %column-center;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    margin: 0;
+   
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      margin: 0;
     }
+
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+      flex-wrap: inherit;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      }
   }
+  
+  
   .footer-contact{
   @extend %column-center;
   margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+      align-items: baseline;
+    }
+
   }
+
 
   .join {
-    @extend %column-center;
+  @extend %column-center;
     margin-bottom:60px;
+    @media screen and (min-width: 1200px) {
+      align-items: baseline;
+      }
   }
 
+  
   
 }  

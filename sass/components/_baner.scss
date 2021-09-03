@@ -1,6 +1,7 @@
 .baner {
     font-family: inherit;
-    max-height: 400px;
+    height: 400px;
+    max-width: 1600px;
     left: auto;
     margin-right: auto;
     background-color: #c4c4c4;
@@ -27,6 +28,8 @@
     }
 
     @media (min-width: 1200px) {
+        height: 600px;
+        padding-top: 200px;
         background-image: url(../images/baner/Baner_img_1200.jpg);
         @media (min-resolution:2dppx) {
             background-image: url(../images/baner/Baner_img_1200@2x.jpg);

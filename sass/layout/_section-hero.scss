@@ -1,22 +1,27 @@
 
 // hero section
+.baner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero {
-  // @extend %container-leveling-pages;
   @extend %center-hold;
   flex-direction: column;
-  
+   
   .hero__title {
     font-weight: 900;
     font-size: 26px;
     line-height: 1.61;
-
-
-    // font-size: 44px;
-    // line-height: 1.36;
     letter-spacing: 0.06em;
     color: $text-hero-section-logo-light;
     text-transform: uppercase;
     margin-bottom: 40px;
+    @media screen and (min-width:1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+      margin-bottom: 30px;
+    }
   }
   
   .btn-hero {

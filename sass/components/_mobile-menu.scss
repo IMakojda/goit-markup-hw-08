@@ -27,6 +27,10 @@
         width: 100vw;
     }
 
+    @media screen and (min-width: 1200px){
+    align-items: baseline;
+    }
+    
     .js-close-menu {
         position: absolute;
         top: 10px;

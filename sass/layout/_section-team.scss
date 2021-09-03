@@ -2,10 +2,16 @@
 .team {
   @extend %pading-mobile;
   background-color: $background-section;
+  @media screen and (min-width:1200px){
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .brigade {
-    
   .brigade__title {
     font-weight: $font-weight-bold;
     font-size: 36px;
@@ -29,9 +35,9 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
+    max-height: 622px;
     &:not(:last-child) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
     }
     display: flex;
     justify-content: center;
@@ -40,6 +46,11 @@
       flex-basis: calc(100% / 2 - 30px);
       margin-left: 30px;
       margin-top: 30px;  
+      max-height: 534px;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - 30px);
+      max-height: 428px;
     }
   }
 }

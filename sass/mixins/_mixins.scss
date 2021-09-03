@@ -21,6 +21,10 @@ margin-top: $set-gap;
     line-height: 1.19;
     text-decoration: none;
     color: $text-color;
+    @media screen and (max-width: 1200px) {
+    font-size: 24px; /* лого хедер*/
+    line-height: 1.16;
+    }
 
     .logo__text {
         color: $akcent-color;
