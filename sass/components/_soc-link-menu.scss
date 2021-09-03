@@ -7,14 +7,22 @@
     letter-spacing: 0.02em;
     list-style: none;
     li:not(:last-child) {
-        margin-right: 20px;
+        padding-right: 10px;
     }
-    
+
+    li:not(:first-child) {
+        padding-left: 10px;
+    }
+
     a {
         color: $akcent-color;
     }
     
     @media screen and (min-width:768px) {
     display: none;        
+    }
+
+    .soc-link-menu__item:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
 }

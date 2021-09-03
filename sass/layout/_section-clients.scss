@@ -26,6 +26,8 @@
     margin-top: calc(-1 * #{$set-gap});
   
     .clients-list__item {
+        display: flex;
+        justify-content: center;
         flex-basis: calc(100% / 2 - #{$set-gap});
         margin-left: $set-gap;
         margin-top: $set-gap;
