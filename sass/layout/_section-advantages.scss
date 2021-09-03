@@ -2,21 +2,10 @@
  .our-advantages {
   @extend %pading-mobile;
     
-    .advantages__title{
-     @extend %visibility-hidden;
-    }
- }
-
-//  .advantages{
-//   //  @extend %container-leveling-pages;
-//  }
-
-
-// @extend %column-wrap;
-        
-  //   &>.advantages-list__card{
-  //     @include conums-amount(4);
-  //   }
+  .advantages__title{
+   @extend %visibility-hidden;
+  }
+}
  
 
 .advantages-list__hold {
@@ -42,6 +31,9 @@
     margin-top: 30px;
     margin-bottom: 10px;
     text-align: center;
+    @media screen and (min-width: 768px){
+      text-align: start;
+    }
   }
   
   .advantages-list__description {
@@ -51,3 +43,25 @@
     color: $text-subtitle-color;
   }
 }
+
+// tablet
+
+.advantages-list{
+  @media screen and (min-width: 768px) {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * 30px);
+  margin-top: calc(-1 * 30px);
+  }
+
+  .advantages-list__card{
+    @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;  
+    }
+  }
+}
+
+    

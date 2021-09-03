@@ -5,8 +5,7 @@
 }
 
 .brigade {
-  // @extend %container-leveling-pages;
-  
+    
   .brigade__title {
     font-weight: $font-weight-bold;
     font-size: 36px;
@@ -17,32 +16,42 @@
 }
 
 .team-list {
-  // @extend %column-wrap;
-  // @media (max-width:767px){
-  //   width: 450px;
-  //   height:622px;
-  // }
+  @media screen and (min-width: 768px) {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * 30px);
+  }
+  
   & > .team-list__item {
-    // @include conums-amount(1);
     background-color: $text-hero-section-logo-light;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
     &:not(:last-child) {
       margin-bottom: 30px;
     }
     max-width: 450px;
     max-height: 622px;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;  
+      max-width: 354px;
+      max-height: 536px;
+    }
   }
 }
-
 
 img {
   max-width: 100%;
   display: block;
   height: auto;
-  
-  }
+}
+
 .caption-pictures {
   text-align: center;
   padding-top: 30px;

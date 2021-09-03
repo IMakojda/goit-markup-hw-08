@@ -7,6 +7,13 @@
   .footer-holder {
   @extend %pading-mobile;
   @extend %column-center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0;
+    }
   }
   .footer-contact{
   @extend %column-center;
