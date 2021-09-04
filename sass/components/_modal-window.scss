@@ -225,6 +225,10 @@
     background-image: url(../images/icon/iconoff.svg);
     background-size: 100% 100%;
     @include animation-efect (background-image);
+    
+    @media screen and (min-width:1200px){
+      top: 5px;
+    }
   }
 
   @media screen and (min-width:1200px) {
