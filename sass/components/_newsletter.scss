@@ -11,11 +11,11 @@
     
 .form-subscribe {
   @media screen and (min-width:768px) {
-    width: 450px;        
+    max-width: 450px;        
   }
 
   @media screen and (min-width:1200px) {
-    width: 570px;        
+   max-width: 570px;        
   }  
 }
 

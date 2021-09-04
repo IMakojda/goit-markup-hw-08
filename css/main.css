@@ -389,12 +389,12 @@ img {
 
 @media screen and (min-width: 768px) {
   .form-subscribe {
-    width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .form-subscribe {
-    width: 570px;
+    max-width: 570px;
   }
 }
 
