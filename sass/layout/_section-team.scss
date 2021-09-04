@@ -2,6 +2,7 @@
 .team {
   @extend %pading-mobile;
   background-color: $background-section;
+
   @media screen and (min-width:1200px){
     margin-left: auto;
     margin-right: auto;
@@ -36,9 +37,11 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     max-height: 622px;
+    
     &:not(:last-child) {
     margin-bottom: 30px;
     }
+
     display: flex;
     justify-content: center;
 
@@ -48,6 +51,7 @@
       margin-top: 30px;  
       max-height: 534px;
     }
+    
     @media screen and (min-width: 1200px) {
       flex-basis: calc(100% / 4 - 30px);
       max-height: 428px;

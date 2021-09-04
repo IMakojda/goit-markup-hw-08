@@ -1,13 +1,12 @@
  /* advantegse styles  */
  .our-advantages {
   @extend %pading-mobile;
+
   @media screen and (min-width:1200px) {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
-    padding: 94px 15px;
-
-    
+    padding: 94px 15px; 
   }
     
   .advantages__title{
@@ -28,7 +27,7 @@
   
 .advantages-list__card {
   &:not(:last-child) {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
   } 
 
   .advantages-list__title {
@@ -38,8 +37,9 @@
     margin-top: 30px;
     margin-bottom: 10px;
     text-align: center;
+    
     @media screen and (min-width: 768px){
-      text-align: start;
+    text-align: start;
     }
   }
   
@@ -66,14 +66,13 @@
     margin-left: 30px;
     margin-top: 30px;  
     }
+
     @media screen and (min-width: 1200px) {
       flex-basis: calc(100% / 4 - 30px);
       margin-left: 30px;
       margin-top: 30px;  
     }
-
   }
-
 }
 
     

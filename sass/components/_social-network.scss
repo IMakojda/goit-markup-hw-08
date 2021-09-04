@@ -27,12 +27,7 @@
 .join {
   width: 206px;
   height: 80px;
-  @media screen and (min-width: 1200px){
-    margin-right: 93px;
-    display: flex;
-    align-items: baseline;
-   }
-     
+
   .join__title {
     @extend %text-s;
     font-weight: $font-weight-bold;

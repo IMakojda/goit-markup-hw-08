@@ -1,12 +1,13 @@
 // utils
 @import './utils/variables';
 @import './utils/breakpoints';
+
 // base
 @import './base/base';
+
 // mixins&placeholders
 @import './mixins/mixins';
 @import './placeholder/placeholder';
-@import './mixins/responsive';
 
 // components
 @import './components/social-network';
@@ -14,13 +15,11 @@
 @import './components/soc-link-menu';
 @import './components/logo';
 @import './components/contacts';
-@import './components/navbar';
 @import './components/newsletter';
 @import './components/modal-window';
-@import './components/mobile-menu';
+@import './components/mobile-menu-main-menu';
 
 // layout
-@import './layout/mobile-first';
 @import './layout/page-header';
 @import './layout/section-hero';
 @import './layout/section-advantages';

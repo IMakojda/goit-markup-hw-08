@@ -21,18 +21,18 @@
     }
 
     @media (min-width: 768px) {
-        background-image: url(../images/baner/Baner_img_768.jpg);
+    background-image: url(../images/baner/Baner_img_768.jpg);
         @media (min-resolution:2dppx) {
-            background-image: url(../images/baner/Baner_img_768@2x.jpg);
+        background-image: url(../images/baner/Baner_img_768@2x.jpg);
         }
     }
 
     @media (min-width: 1200px) {
-        height: 600px;
-        padding-top: 200px;
-        background-image: url(../images/baner/Baner_img_1200.jpg);
+    height: 600px;
+    padding-top: 200px;
+    background-image: url(../images/baner/Baner_img_1200.jpg);
         @media (min-resolution:2dppx) {
-            background-image: url(../images/baner/Baner_img_1200@2x.jpg);
+        background-image: url(../images/baner/Baner_img_1200@2x.jpg);
         }
     }
 }

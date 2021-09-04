@@ -1,79 +1,88 @@
 // Newsletter {
   
 .newsletter-subscribe__title {
-    margin-bottom: 20px;
-    @extend %text-s;
-    font-weight: bold;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $text-hero-section-logo-light;
-  }
+  margin-bottom: 20px;
+  @extend %text-s;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $text-hero-section-logo-light;
+}
     
-  .form-subscribe {
-    @media screen and (min-width:768px) {
-      width: 450px;        
-      }
-    @media screen and (min-width:1200px) {
-      width: 570px;        
-      }  
-  }
-  .newsletter-subscribe{
-    @extend %column-center;
-    @media screen and (min-width:768px) {
-      width:100%;        
-    }
-    @media screen and (min-width:1200px) {
-      width: 570px;
-      align-items: baseline;        
-    }
+.form-subscribe {
+  @media screen and (min-width:768px) {
+    width: 450px;        
   }
 
-  .register {
-    position: relative;
-    @extend %column-center;
-    @media screen and (min-width:1200px) {
-      display: block;  
+  @media screen and (min-width:1200px) {
+    width: 570px;        
+  }  
+}
+
+.newsletter-subscribe{
+  @extend %column-center;
+
+  @media screen and (min-width:768px) {
+  width:100%;        
+  }
+
+  @media screen and (min-width:1200px) {
+  width: 570px;
+  align-items: baseline;        
+  }
+}
+
+.register {
+  position: relative;
+  @extend %column-center;
+  
+  @media screen and (min-width:1200px) {
+    display: block;  
+  }
+
+  .register__input {
+    height: 50px;
+    width: 450px;
+    background-color: rgba(33, 150, 243, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: $text-hero-section-logo-light;
+    margin-bottom: 20px;
+    
+    &:focus + .register__label,
+    &:not(:placeholder-shown) + .register__label {
+    opacity: 0;
     }
-    .register__input {
-      height: 50px;
-      width: 450px;
-      background-color: rgba(33, 150, 243, 0);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 4px;
-      color: $text-hero-section-logo-light;
-      margin-bottom: 20px;
-      
-      &:focus + .register__label,
-      &:not(:placeholder-shown) + .register__label {
-      opacity: 0;
-      }
       @media screen and (min-width:1200px) {
-        width: 353px;        
-        }
-    }
+      width: 353px;        
+      }
+  }
   
-    .register__label {
-      position: absolute;
-      top:15px;
-      left: 16px;
-      font-size: 16px;
-      line-height: 1.25;
-      letter-spacing: 0.03em;
-      color: rgba(255, 255, 255, 0.6);
-      opacity: 1;
-      transition: opacity $trans-direct $timing-function;
-    }
+  .register__label {
+    position: absolute;
+    top:15px;
+    left: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    transition: opacity $trans-direct $timing-function;
+  }
   
-    .register__icon {
-      fill: $text-hero-section-logo-light;
-      margin-left: 10px;
-    }
+  .register__icon {
+    fill: $text-hero-section-logo-light;
+    margin-left: 10px;
+  }
   
-    .register__button{
-      margin: auto;
-      padding-left: 29px;
-      @extend %btn-standart;
-      display: inline-flex;
-      align-items: center;
+  .register__button{
+    margin: auto;
+    padding-left: 29px;
+    @extend %btn-standart;
+    display: inline-flex;
+    align-items: center;
+    @media screen and (min-width:1200px) {
+      margin-left: 12px;;        
     }
   }
+}

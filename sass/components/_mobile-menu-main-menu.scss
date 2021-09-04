@@ -25,6 +25,7 @@
         opacity: 1;
         height: 80px;
         width: 100vw;
+        overflow-y: auto;
     }
 
     @media screen and (min-width: 1200px){
@@ -39,14 +40,15 @@
         @media(min-width: 768px){
         display: none;
         }
-        .icon-close {
-        fill:$logo-color-dark;
-        @include animation-efect (fill);
-        }
-
+ 
         &:focus .icon-close,
         &:hover .icon-close {
         fill: $akcent-color;
+        }
+
+        .icon-close {
+        fill:$logo-color-dark;
+        @include animation-efect (fill);
         }
     }
 
@@ -80,8 +82,9 @@
     width: 40px;
     height: 40px;
     background-color: transparent;
+    
     @media (min-width: 767px) {
-        display: none;
+    display: none;
     }
 }
 
@@ -95,9 +98,10 @@
         }  
       &:not(:last-child){
       margin-bottom: 32px;
-      @media screen and (min-width: 768px) {
-      margin-bottom: 0;
-      margin-right: 50px;
+      
+        @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+        margin-right: 50px;
         }
       }
     }

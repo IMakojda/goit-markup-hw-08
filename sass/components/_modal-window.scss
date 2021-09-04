@@ -29,12 +29,14 @@
   top: 50%;
   left: 50%;
   
+  @media screen and (min-width:1200px) {
+    width: 528px;
+    height: 581px;
+  }
+  
   @extend %center-hold;
   flex-direction: column;
   padding: 40px;
-
-  // height: 581px;
-  // width: 528px;
   border-radius: 4px;
   background-color: $text-hero-section-logo-light;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -77,7 +79,6 @@
     @media (max-width: 1200px) {
       line-height: 1.5;
     }
-
   }
 }
     
@@ -89,19 +90,18 @@
 }
   
 .registration-form__field {
-  
+  width: 370px;
   height: 58px;
-  width: 370px; 
-  
   position: relative;
-  // width: 448px;
-  // height: 58px;
   padding-top: 18px;
   margin-bottom: 10px;
-
   &:focus-within .registration-form__icon {
     fill: $akcent-color;
   }
+
+  @media screen and (min-width:1200px) {
+    width: 448px;
+  } 
 }
   
 .registration-form__input {
@@ -117,13 +117,16 @@
   &:focus{
   border: 1px solid $akcent-color;
   }
+
+  @media screen and (min-width:1200px) {
+  width: 448px;
+  } 
 }
   
 .registration-form__name {
   position: absolute;
   top: 0;
   left: 0;
-  
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -151,6 +154,10 @@
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
+
+  @media screen and (min-width:1200px) {
+    width: 448px;
+  } 
 }
   
 .registration-form__area-input {
@@ -186,9 +193,6 @@
   padding-left: 4px;
   width: 370px;
   height: 15px;
-  // font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.03em;
@@ -222,6 +226,14 @@
     background-size: 100% 100%;
     @include animation-efect (background-image);
   }
+
+  @media screen and (min-width:1200px) {
+  width: 423px;
+  height: 24px; 
+  font-size: 14px;
+  line-height: 1.71; 
+  
+  } 
 }
 
 .registration-form__checkbox-input{
@@ -234,7 +246,6 @@
   
 .registration-form__button-send {
   @extend %btn-standart;
-
   margin-top: 30px;
   font-weight: $font-weight-bold;
   font-size: 16px;
