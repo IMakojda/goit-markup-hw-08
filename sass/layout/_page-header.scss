@@ -1,19 +1,17 @@
 .header{
   border-bottom: 1px solid #ececec; 
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+
   .header__title-visibility-hiden{
   @extend %visibility-hidden;
   }
-
-  @media screen and (max-width:767px){
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 15px;
-  }
-
+     
   @media screen and (min-width:768px) {
+    display: flex;
+    align-items: center;
     height: 80px;
     padding: 0 15px;
   }
