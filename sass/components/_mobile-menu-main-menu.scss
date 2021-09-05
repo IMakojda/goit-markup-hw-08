@@ -1,11 +1,12 @@
 
 .nav-tools{
+    display: block;
     overflow-y: scroll;
-    display: none;
     flex-direction: column;
     height: 60px;
-    transform: translateY(100%);
-    @include animation-efect (transform);
+    opacity: 0;
+    @include animation-efect (opacity);
+    
     
     @media screen and (max-width: 767px) {
         position: fixed;
@@ -19,7 +20,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        transform: translateY(0);
+        opacity: 1;
         position: relative;
         display: flex;
         flex-direction: row;
@@ -74,8 +75,7 @@
 }
 
 .nav-tools.is-open {
-    display: block;
-    transform: translateY(0);
+    opacity: 1;
 }
 
 .js-open-menu {
