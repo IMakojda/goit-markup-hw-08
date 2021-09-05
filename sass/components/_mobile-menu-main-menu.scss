@@ -4,7 +4,9 @@
     display: none;
     flex-direction: column;
     height: 60px;
-
+    transform: translateY(100%);
+    @include animation-efect (transform);
+    
     @media screen and (max-width: 767px) {
         position: fixed;
         top: 0;
@@ -17,12 +19,12 @@
     }
 
     @media screen and (min-width: 768px) {
+        transform: translateY(0);
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        opacity: 1;
         height: 80px;
         width: 100vw;
         overflow-y: auto;
@@ -73,6 +75,7 @@
 
 .nav-tools.is-open {
     display: block;
+    transform: translateY(0);
 }
 
 .js-open-menu {
