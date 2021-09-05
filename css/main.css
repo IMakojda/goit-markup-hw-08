@@ -786,6 +786,7 @@ img {
 .nav-tools {
   display: block;
   overflow-y: scroll;
+  pointer-events: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -880,6 +881,7 @@ img {
 
 .nav-tools.is-open {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .js-open-menu {
@@ -1236,12 +1238,16 @@ img {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
+  .team-list > .team-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
   .team-list > .team-list__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
     margin-top: 30px;
-    max-height: 534px;
   }
 }
 @media screen and (min-width: 1200px) {

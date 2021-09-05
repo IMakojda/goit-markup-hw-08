@@ -2,7 +2,6 @@
 .our-client {
     display: block;
     @extend %pading-mobile;
-
     @media screen and (min-width: 1200px) {
     margin-left: auto;
     margin-right: auto;

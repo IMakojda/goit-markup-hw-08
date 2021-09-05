@@ -2,6 +2,7 @@
 .nav-tools{
     display: block;
     overflow-y: scroll;
+    pointer-events: none;
     flex-direction: column;
     height: 60px;
     opacity: 0;
@@ -76,6 +77,7 @@
 
 .nav-tools.is-open {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .js-open-menu {
