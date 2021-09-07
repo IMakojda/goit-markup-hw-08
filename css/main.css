@@ -828,7 +828,7 @@ img {
             align-items: center;
     height: 80px;
     width: 100vw;
-    overflow-y: auto;
+    pointer-events: auto;
   }
 }
 @media screen and (min-width: 1200px) {
